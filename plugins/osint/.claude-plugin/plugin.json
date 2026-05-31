@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "osint",
+  "description": "Open-source intelligence: external footprinting & attack-surface mapping, exposure discovery (leaks/exposed assets), and people/social recon — for authorized recon.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["osint", "recon", "footprinting", "attack-surface", "exposure", "reconnaissance"]
+}

@@ -117,6 +117,22 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "network-security",
+      "source": "network-security",
+      "description": "Network security: authorized network penetration testing, segmentation/firewall review, and protocol/service security assessment.",
+      "category": "domain",
+      "keywords": ["network", "pentest", "segmentation", "firewall", "protocol", "lateral-movement"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "osint",
+      "source": "osint",
+      "description": "Open-source intelligence: external footprinting & attack-surface mapping, exposure discovery (leaks/exposed assets), and people/social recon.",
+      "category": "domain",
+      "keywords": ["osint", "recon", "footprinting", "attack-surface", "exposure"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "llm-security",
       "source": "llm-security",
       "description": "OWASP LLM Top 10 assessment, prompt-injection testing, and threat modeling for LLM, RAG, and agentic AI systems.",
@@ -175,9 +191,17 @@
     {
       "name": "pentester",
       "source": "pentester",
-      "description": "Pentester role bundle: recon workflow, methodology-driven testing, and engagement reporting. Auto-installs its core/domain stack.",
+      "description": "Pentester role bundle: recon workflow, methodology-driven testing, and engagement reporting. Auto-installs its core/domain stack (osint, web, network, threat-modeling).",
       "category": "role",
       "keywords": ["pentest", "offensive", "recon", "role", "bundle"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "red-team",
+      "source": "red-team",
+      "description": "Red-team role bundle: objectives-based adversary emulation aligned to real threat-actor TTPs (ATT&CK), from recon to impact. Auto-installs its offensive + intel stack.",
+      "category": "role",
+      "keywords": ["red-team", "adversary-emulation", "offensive", "role", "bundle", "mitre-attack"],
       "license": "GPL-3.0"
     },
     {
