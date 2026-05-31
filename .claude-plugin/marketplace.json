@@ -245,6 +245,14 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "grc",
+      "source": "grc",
+      "description": "Governance, risk & compliance: framework gap-assessments (SOC 2 / ISO 27001 / PCI / HIPAA / GDPR / NIST), security risk assessment & register, and policy management. Auto-installs reporting + diagramming.",
+      "category": "role",
+      "keywords": ["grc", "compliance", "risk", "governance", "iso-27001", "soc2", "audit"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "ciso-toolkit",
       "source": "ciso-toolkit",
       "description": "CISO executive toolkit: security strategy & roadmap, cyber-risk quantification, and board/executive decks. Auto-installs reporting, diagramming, and threat-modeling.",

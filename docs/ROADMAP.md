@@ -61,7 +61,7 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `security-analyst` | ✅ |
 | `security-engineer` | ✅ |
 | `security-architect` | ✅ |
-| `grc` | ⬜ |
+| `grc` | ✅ |
 | `blue-team` | ✅ |
 | `soc-siem` | ✅ |
 | `ciso-toolkit` (executive — board decks, strategy, risk narratives) | ✅ |
@@ -89,6 +89,7 @@ for each bundle's intended members.
 | `security-analyst` | role | ✅ (deps: blueops-suite, reporting, diagramming) |
 | `security-engineer` | role | ✅ (deps: sast-sca, cloud-suite, reporting) |
 | `red-team` | role | ✅ (deps: osint, network-security, threat-intelligence, reporting, diagramming) |
+| `grc` | role | ✅ (deps: reporting, diagramming) |
 | `ciso-toolkit` | executive | ✅ (deps: reporting, diagramming, threat-modeling) |
 | `cto-security` | executive | ✅ (deps: threat-modeling, diagramming, reporting) |
 | `grc` | role | ⬜ |
