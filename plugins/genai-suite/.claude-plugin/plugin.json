@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "genai-suite",
+  "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM, RAG, agentic, multimodal).",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["suite", "bundle", "genai", "ai-security", "llm", "rag", "agentic"],
+  "dependencies": ["llm-security", "rag-security", "agentic-ai-security", "multimodal-security"]
+}

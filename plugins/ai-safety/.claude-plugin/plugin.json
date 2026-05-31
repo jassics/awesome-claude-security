@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "ai-safety",
+  "description": "AI safety (not security): harm modeling, safety evaluations, responsible red-teaming, bias/fairness, guardrail review, and responsible-AI governance.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["ai-safety", "responsible-ai", "alignment", "harm", "bias", "fairness", "guardrails", "nist-ai-rmf", "eu-ai-act"]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "plugin-template",
+  "description": "ONE sentence: what this plugin does and for whom.",
+  "version": "0.1.0",
+  "author": { "name": "Your Name", "email": "you@example.com" },
+  "license": "GPL-3.0",
+  "keywords": ["domain-or-role", "framework"]
+}

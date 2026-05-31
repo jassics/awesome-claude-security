@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "awesome-claude-security",
+  "owner": {
+    "name": "Jassics",
+    "email": "jassics@gmail.com",
+    "url": "https://github.com/jassics/awesome-claude-security"
+  },
+  "metadata": {
+    "description": "Claude Code skills, agents, and tooling for cybersecurity and GenAI security work.",
+    "version": "0.1.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "security-diagramming",
+      "source": "security-diagramming",
+      "description": "Attack trees, threat-model DFDs, architecture diagrams, mindmaps, and infographics for security work (Excalidraw-based).",
+      "category": "core",
+      "keywords": ["diagram", "excalidraw", "attack-tree", "dfd", "mindmap", "infographic"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "security-reporting",
+      "source": "security-reporting",
+      "description": "Generate consistent findings, pentest reports, vulnerability writeups, and executive summaries from your work.",
+      "category": "core",
+      "keywords": ["reporting", "findings", "pentest-report", "executive-summary", "cvss"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "threat-modeling",
+      "source": "threat-modeling",
+      "description": "STRIDE / PASTA threat modeling, data flow diagrams, attack trees, and risk-ranked mitigations.",
+      "category": "domain",
+      "keywords": ["threat-modeling", "stride", "pasta", "dfd", "risk"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "llm-security",
+      "source": "llm-security",
+      "description": "OWASP LLM Top 10 assessment, prompt-injection testing, and threat modeling for LLM, RAG, and agentic AI systems.",
+      "category": "genai",
+      "keywords": ["llm", "genai", "owasp-llm", "prompt-injection", "rag", "ai-agent"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "rag-security",
+      "source": "rag-security",
+      "description": "Security for Retrieval-Augmented Generation: pipeline review, retrieval/data poisoning testing, and vector-store isolation checks.",
+      "category": "genai",
+      "keywords": ["rag", "genai", "retrieval", "vector-store", "poisoning"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "agentic-ai-security",
+      "source": "agentic-ai-security",
+      "description": "Security for autonomous, tool-using AI agents: review, tool-permission audit, and autonomy-boundary testing for excessive agency.",
+      "category": "genai",
+      "keywords": ["agentic", "ai-agent", "genai", "excessive-agency", "tool-use"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "multimodal-security",
+      "source": "multimodal-security",
+      "description": "Security for multimodal AI: cross-modal injection testing (image/audio/document) and input-handling review across modalities.",
+      "category": "genai",
+      "keywords": ["multimodal", "genai", "image-injection", "ocr", "adversarial"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "ai-safety",
+      "source": "ai-safety",
+      "description": "AI safety (distinct from security): harm modeling, safety evaluations, responsible red-teaming, bias/fairness, guardrail review, and responsible-AI governance.",
+      "category": "ai-safety",
+      "keywords": ["ai-safety", "responsible-ai", "harm", "bias", "fairness", "guardrails", "nist-ai-rmf", "eu-ai-act"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "ai-safety-engineer",
+      "source": "ai-safety-engineer",
+      "description": "AI safety engineer role bundle: build and operationalize safeguards (evals-in-CI, guardrails, monitoring, safety cases, governance). Auto-installs the ai-safety stack.",
+      "category": "role",
+      "keywords": ["ai-safety", "responsible-ai", "role", "bundle", "safety-case"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "pentester",
+      "source": "pentester",
+      "description": "Pentester role bundle: recon workflow, methodology-driven testing, and engagement reporting. Auto-installs its core/domain stack.",
+      "category": "role",
+      "keywords": ["pentest", "offensive", "recon", "role", "bundle"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "genai-suite",
+      "source": "genai-suite",
+      "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM today; RAG, agentic, multimodal as they ship).",
+      "category": "suite",
+      "keywords": ["suite", "bundle", "genai", "ai-security", "llm"],
+      "license": "GPL-3.0"
+    }
+  ]
+}

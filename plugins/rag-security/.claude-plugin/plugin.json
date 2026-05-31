@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "rag-security",
+  "description": "Security for Retrieval-Augmented Generation: pipeline review, retrieval/data poisoning testing, and vector-store isolation checks.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["rag", "genai", "retrieval", "vector-store", "embeddings", "poisoning", "ai-security"]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "multimodal-security",
+  "description": "Security for multimodal AI: cross-modal injection testing (image/audio/document) and input-handling review across modalities.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["multimodal", "genai", "image-injection", "ocr", "adversarial", "vision", "ai-security"]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "security-diagramming",
+  "description": "Attack trees, threat-model DFDs, architecture diagrams, mindmaps, and infographics for security work.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["diagram", "excalidraw", "attack-tree", "dfd", "mindmap", "infographic", "mermaid"]
+}
