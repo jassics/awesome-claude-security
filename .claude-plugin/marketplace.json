@@ -181,6 +181,22 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "blue-team",
+      "source": "blue-team",
+      "description": "Blue-team role bundle: threat-informed defense across detection, response, hunting, and intel, plus purple-team validation. Auto-installs the defensive stack.",
+      "category": "role",
+      "keywords": ["blue-team", "defense", "role", "bundle", "purple-team"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "soc-siem",
+      "source": "soc-siem",
+      "description": "SOC / SIEM operations role bundle: alert triage, monitoring, enrichment, and tiered escalation. Auto-installs the defensive stack.",
+      "category": "role",
+      "keywords": ["soc", "siem", "role", "bundle", "alert-triage", "monitoring"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "genai-suite",
       "source": "genai-suite",
       "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM, RAG, agentic, multimodal).",

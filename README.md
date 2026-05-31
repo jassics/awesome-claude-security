@@ -31,7 +31,7 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 | **AI safety** | Preventing AI systems from causing harm (a *distinct* discipline — [see why](docs/TAXONOMY.md#ai-security-vs-ai-safety)) | `ai-safety`, `ai-safety-engineer` |
 | **Role** | Persona bundles that combine domains + workflow | `pentester`, `ai-safety-engineer`, security analyst, engineer, architect, GRC, blue team, SOC/SIEM, CISO/CTO |
 
-### Shipped today (26 plugins)
+### Shipped today (28 plugins)
 
 **Core** — [`security-diagramming`](plugins/security-diagramming/) (attack trees, DFDs, architecture diagrams, mindmaps, infographics) · [`security-reporting`](plugins/security-reporting/) (findings, pentest reports, exec summaries, CVSS).
 
@@ -41,7 +41,7 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 
 **AI safety** *(≠ security — [see why](docs/TAXONOMY.md#ai-security-vs-ai-safety))* — [`ai-safety`](plugins/ai-safety/) (harm modeling, safety evals, responsible red-team, bias/fairness, guardrails, RAI governance).
 
-**Roles** *(auto-install their stack)* — [`pentester`](plugins/pentester/) · [`ai-safety-engineer`](plugins/ai-safety-engineer/) · [`responsible-ai-officer`](plugins/responsible-ai-officer/) (AI governance, EU AI Act risk-tiering).
+**Roles** *(auto-install their stack)* — [`pentester`](plugins/pentester/) · [`blue-team`](plugins/blue-team/) (threat-informed defense + purple teaming) · [`soc-siem`](plugins/soc-siem/) (alert triage, monitoring) · [`ai-safety-engineer`](plugins/ai-safety-engineer/) · [`responsible-ai-officer`](plugins/responsible-ai-officer/) (AI governance, EU AI Act risk-tiering).
 
 **Suites** *(one-shot bundles)* — [`genai-suite`](plugins/genai-suite/) (all GenAI security) · [`appsec-suite`](plugins/appsec-suite/) (web+api+mobile+SAST/SCA) · [`cloud-suite`](plugins/cloud-suite/) (cloud+k8s+infrastructure) · [`blueops-suite`](plugins/blueops-suite/) (detection+dfir+threat-intel) · [`ai-safety-suite`](plugins/ai-safety-suite/) (safety + GenAI security together).
 

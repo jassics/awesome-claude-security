@@ -62,8 +62,8 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `security-engineer` | ⬜ |
 | `security-architect` | ⬜ |
 | `grc` | ⬜ |
-| `blue-team` | ⬜ |
-| `soc-siem` | ⬜ |
+| `blue-team` | ✅ |
+| `soc-siem` | ✅ |
 | `ciso-toolkit` (board decks, strategy, risk narratives) | ⬜ |
 | `cto-security` (tech strategy, secure-by-design) | ⬜ |
 
@@ -83,8 +83,10 @@ for each bundle's intended members.
 | `ai-safety-suite` | suite | ✅ (deps: ai-safety, genai-suite) |
 | `cloud-suite` | domain suite | ✅ (deps: cloud-security, k8s-security, infrastructure-security) |
 | `blueops-suite` | domain suite | ✅ (deps: detection-engineering, dfir, threat-intelligence) |
+| `blue-team` | role | ✅ (deps: blueops-suite, reporting, diagramming) |
+| `soc-siem` | role | ✅ (deps: blueops-suite, reporting) |
 | `red-team` · `security-analyst` · `security-engineer` · `security-architect` | role | ⬜ |
-| `grc` · `blue-team` · `soc-siem` · `ciso-toolkit` · `cto-security` | role | ⬜ |
+| `grc` · `ciso-toolkit` · `cto-security` | role | ⬜ |
 
 ## Cross-cutting workstreams
 
