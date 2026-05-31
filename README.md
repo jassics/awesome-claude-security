@@ -31,11 +31,11 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 | **AI safety** | Preventing AI systems from causing harm (a *distinct* discipline — [see why](docs/TAXONOMY.md#ai-security-vs-ai-safety)) | `ai-safety`, `ai-safety-engineer` |
 | **Role** | Persona bundles that combine domains + workflow | `pentester`, `ai-safety-engineer`, security analyst, engineer, architect, GRC, blue team, SOC/SIEM, CISO/CTO |
 
-### Shipped today (18 plugins)
+### Shipped today (20 plugins)
 
 **Core** — [`security-diagramming`](plugins/security-diagramming/) (attack trees, DFDs, architecture diagrams, mindmaps, infographics) · [`security-reporting`](plugins/security-reporting/) (findings, pentest reports, exec summaries, CVSS).
 
-**Domain** — [`threat-modeling`](plugins/threat-modeling/) (STRIDE/PASTA) · [`web-app-security`](plugins/web-app-security/) (OWASP Web Top 10, access control, injection) · [`api-security`](plugins/api-security/) (OWASP API Top 10, BOLA/BFLA) · [`mobile-security`](plugins/mobile-security/) (MASVS/MASTG) · [`sast-sca`](plugins/sast-sca/) (static analysis + dependency/SBOM).
+**Domain** — [`threat-modeling`](plugins/threat-modeling/) (STRIDE/PASTA) · [`web-app-security`](plugins/web-app-security/) (OWASP Web Top 10, access control, injection) · [`api-security`](plugins/api-security/) (OWASP API Top 10, BOLA/BFLA) · [`mobile-security`](plugins/mobile-security/) (MASVS/MASTG) · [`sast-sca`](plugins/sast-sca/) (static analysis + dependency/SBOM) · [`cloud-security`](plugins/cloud-security/) (AWS/Azure/GCP posture, IAM, misconfig) · [`k8s-security`](plugins/k8s-security/) (CIS/4Cs, RBAC, pod hardening).
 
 **GenAI security** — [`llm-security`](plugins/llm-security/) (OWASP LLM Top 10, prompt injection) · [`rag-security`](plugins/rag-security/) (retrieval poisoning, isolation) · [`agentic-ai-security`](plugins/agentic-ai-security/) (tool-permission audit, autonomy boundaries) · [`multimodal-security`](plugins/multimodal-security/) (cross-modal injection).
 

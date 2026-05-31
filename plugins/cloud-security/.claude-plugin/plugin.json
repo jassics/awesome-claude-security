@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "cloud-security",
+  "description": "Cloud security (AWS/Azure/GCP): posture review, IAM least-privilege review, and misconfiguration scanning.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["cloud", "aws", "azure", "gcp", "cspm", "iam", "cis", "posture"]
+}

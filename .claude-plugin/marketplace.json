@@ -69,6 +69,22 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "cloud-security",
+      "source": "cloud-security",
+      "description": "Cloud security (AWS/Azure/GCP): posture review, IAM least-privilege review, and misconfiguration scanning.",
+      "category": "domain",
+      "keywords": ["cloud", "aws", "azure", "gcp", "cspm", "iam", "cis"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "k8s-security",
+      "source": "k8s-security",
+      "description": "Kubernetes security: cluster review (CIS / 4Cs), RBAC least-privilege audit, and workload/pod hardening (Pod Security Standards).",
+      "category": "domain",
+      "keywords": ["kubernetes", "k8s", "rbac", "pod-security", "cis", "container"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "llm-security",
       "source": "llm-security",
       "description": "OWASP LLM Top 10 assessment, prompt-injection testing, and threat modeling for LLM, RAG, and agentic AI systems.",

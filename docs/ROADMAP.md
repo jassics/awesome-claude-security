@@ -22,8 +22,8 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `api-security` | ✅ |
 | `mobile-security` | ✅ |
 | `network-security` | ⬜ |
-| `cloud-security` | ⬜ |
-| `k8s-security` | ⬜ |
+| `cloud-security` | ✅ |
+| `k8s-security` | ✅ |
 | `infrastructure-security` | ⬜ |
 | `sast-sca` | ✅ |
 | `osint` | ⬜ |

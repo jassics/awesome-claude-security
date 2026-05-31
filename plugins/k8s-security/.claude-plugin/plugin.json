@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "k8s-security",
+  "description": "Kubernetes security: cluster review (CIS / 4Cs), RBAC least-privilege audit, and workload/pod hardening (Pod Security Standards).",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["kubernetes", "k8s", "rbac", "pod-security", "cis", "container", "cncf"]
+}
