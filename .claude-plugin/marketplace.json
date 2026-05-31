@@ -37,6 +37,38 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "web-app-security",
+      "source": "web-app-security",
+      "description": "Web application security testing: OWASP Web Top 10 assessment, access-control/IDOR testing, and injection testing.",
+      "category": "domain",
+      "keywords": ["web", "appsec", "owasp", "xss", "sqli", "access-control"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "api-security",
+      "source": "api-security",
+      "description": "API security testing: OWASP API Security Top 10 assessment and object/function-level authorization (BOLA/BFLA) testing.",
+      "category": "domain",
+      "keywords": ["api", "appsec", "owasp-api", "bola", "bfla", "graphql"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "mobile-security",
+      "source": "mobile-security",
+      "description": "Mobile app security (Android/iOS): OWASP MASVS review and MASTG-based testing methodology.",
+      "category": "domain",
+      "keywords": ["mobile", "android", "ios", "masvs", "mastg", "appsec"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "sast-sca",
+      "source": "sast-sca",
+      "description": "Static analysis (SAST) and software composition analysis (SCA): run/triage code scans, dependency/SBOM analysis, and prioritize findings.",
+      "category": "domain",
+      "keywords": ["sast", "sca", "appsec", "sbom", "dependencies", "triage"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "llm-security",
       "source": "llm-security",
       "description": "OWASP LLM Top 10 assessment, prompt-injection testing, and threat modeling for LLM, RAG, and agentic AI systems.",
@@ -85,6 +117,14 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "responsible-ai-officer",
+      "source": "responsible-ai-officer",
+      "description": "Responsible-AI governance role: AI use-case intake & risk-tiering, oversight, documentation, and compliance (NIST AI RMF / EU AI Act / ISO 42001). Auto-installs the ai-safety stack.",
+      "category": "role",
+      "keywords": ["responsible-ai", "ai-governance", "grc", "role", "eu-ai-act", "nist-ai-rmf"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "pentester",
       "source": "pentester",
       "description": "Pentester role bundle: recon workflow, methodology-driven testing, and engagement reporting. Auto-installs its core/domain stack.",
@@ -95,9 +135,25 @@
     {
       "name": "genai-suite",
       "source": "genai-suite",
-      "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM today; RAG, agentic, multimodal as they ship).",
+      "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM, RAG, agentic, multimodal).",
       "category": "suite",
       "keywords": ["suite", "bundle", "genai", "ai-security", "llm"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "appsec-suite",
+      "source": "appsec-suite",
+      "description": "Domain suite: one-shot install of the appsec plugins (web, API, mobile, SAST/SCA).",
+      "category": "suite",
+      "keywords": ["suite", "bundle", "appsec", "web", "api", "mobile", "sast"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "ai-safety-suite",
+      "source": "ai-safety-suite",
+      "description": "Trustworthy-AI suite: pairs AI safety with the full GenAI security stack (ai-safety + genai-suite).",
+      "category": "suite",
+      "keywords": ["suite", "bundle", "trustworthy-ai", "ai-safety", "ai-security"],
       "license": "GPL-3.0"
     }
   ]

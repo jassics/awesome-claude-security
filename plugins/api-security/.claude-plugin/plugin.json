@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "api-security",
+  "description": "API security testing: OWASP API Security Top 10 assessment and object/function-level authorization (BOLA/BFLA) testing.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["api", "appsec", "owasp-api", "bola", "bfla", "rest", "graphql"]
+}

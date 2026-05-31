@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "responsible-ai-officer",
+  "description": "Responsible-AI governance role: AI use-case intake & risk-tiering, oversight, documentation, and compliance (NIST AI RMF / EU AI Act / ISO 42001). Auto-installs the ai-safety stack.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["responsible-ai", "ai-governance", "grc", "role", "eu-ai-act", "nist-ai-rmf", "iso-42001"],
+  "dependencies": ["ai-safety", "security-reporting", "security-diagramming"]
+}

@@ -31,21 +31,21 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 | **AI safety** | Preventing AI systems from causing harm (a *distinct* discipline — [see why](docs/TAXONOMY.md#ai-security-vs-ai-safety)) | `ai-safety`, `ai-safety-engineer` |
 | **Role** | Persona bundles that combine domains + workflow | `pentester`, `ai-safety-engineer`, security analyst, engineer, architect, GRC, blue team, SOC/SIEM, CISO/CTO |
 
-### Shipped today
+### Shipped today (18 plugins)
 
-- **[`security-diagramming`](plugins/security-diagramming/)** — attack trees, threat-model DFDs, architecture diagrams, mindmaps, infographics.
-- **[`security-reporting`](plugins/security-reporting/)** — findings, full pentest reports, vuln writeups, executive summaries with CVSS.
-- **[`threat-modeling`](plugins/threat-modeling/)** — STRIDE/PASTA, DFDs, attack trees, risk-ranked mitigations.
-- **[`llm-security`](plugins/llm-security/)** — OWASP LLM Top 10, prompt-injection testing, AI/RAG/agent threat modeling.
-- **[`rag-security`](plugins/rag-security/)** — RAG pipeline review, retrieval/data poisoning tests, vector-store isolation.
-- **[`agentic-ai-security`](plugins/agentic-ai-security/)** — agent review, tool-permission audit, autonomy-boundary testing.
-- **[`multimodal-security`](plugins/multimodal-security/)** — cross-modal injection testing and multimodal input-handling review.
-- **[`ai-safety`](plugins/ai-safety/)** — harm modeling, safety evals, responsible red-teaming, bias/fairness, guardrails, responsible-AI governance. *AI safety ≠ AI security — [see why](docs/TAXONOMY.md#ai-security-vs-ai-safety).*
-- **[`pentester`](plugins/pentester/)** — recon, methodology-driven testing, engagement reporting. *Role bundle* — auto-installs reporting, diagramming, and threat-modeling.
-- **[`ai-safety-engineer`](plugins/ai-safety-engineer/)** — *role bundle* — build & operationalize safeguards (evals-in-CI, guardrails, safety cases). Auto-installs the `ai-safety` stack.
-- **[`genai-suite`](plugins/genai-suite/)** — *domain suite* — one-shot install of all four GenAI/AI-security plugins above.
+**Core** — [`security-diagramming`](plugins/security-diagramming/) (attack trees, DFDs, architecture diagrams, mindmaps, infographics) · [`security-reporting`](plugins/security-reporting/) (findings, pentest reports, exec summaries, CVSS).
 
-See [docs/ROADMAP.md](docs/ROADMAP.md) for the ~40 plugins and the role/domain bundles planned across all buckets.
+**Domain** — [`threat-modeling`](plugins/threat-modeling/) (STRIDE/PASTA) · [`web-app-security`](plugins/web-app-security/) (OWASP Web Top 10, access control, injection) · [`api-security`](plugins/api-security/) (OWASP API Top 10, BOLA/BFLA) · [`mobile-security`](plugins/mobile-security/) (MASVS/MASTG) · [`sast-sca`](plugins/sast-sca/) (static analysis + dependency/SBOM).
+
+**GenAI security** — [`llm-security`](plugins/llm-security/) (OWASP LLM Top 10, prompt injection) · [`rag-security`](plugins/rag-security/) (retrieval poisoning, isolation) · [`agentic-ai-security`](plugins/agentic-ai-security/) (tool-permission audit, autonomy boundaries) · [`multimodal-security`](plugins/multimodal-security/) (cross-modal injection).
+
+**AI safety** *(≠ security — [see why](docs/TAXONOMY.md#ai-security-vs-ai-safety))* — [`ai-safety`](plugins/ai-safety/) (harm modeling, safety evals, responsible red-team, bias/fairness, guardrails, RAI governance).
+
+**Roles** *(auto-install their stack)* — [`pentester`](plugins/pentester/) · [`ai-safety-engineer`](plugins/ai-safety-engineer/) · [`responsible-ai-officer`](plugins/responsible-ai-officer/) (AI governance, EU AI Act risk-tiering).
+
+**Suites** *(one-shot bundles)* — [`genai-suite`](plugins/genai-suite/) (all GenAI security) · [`appsec-suite`](plugins/appsec-suite/) (web+api+mobile+SAST/SCA) · [`ai-safety-suite`](plugins/ai-safety-suite/) (safety + GenAI security together).
+
+See [docs/ROADMAP.md](docs/ROADMAP.md) for the ~40 plugins and bundles planned across all buckets.
 
 > **Security vs. safety:** the GenAI plugins protect AI systems from *attackers*; `ai-safety` prevents AI systems from *causing harm* even absent an attacker. They're complementary — most AI features need both.
 

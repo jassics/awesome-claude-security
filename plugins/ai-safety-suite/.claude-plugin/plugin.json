@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "ai-safety-suite",
+  "description": "Trustworthy-AI suite: one-shot install pairing AI safety with the full GenAI security stack (ai-safety + genai-suite).",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["suite", "bundle", "trustworthy-ai", "ai-safety", "ai-security", "genai"],
+  "dependencies": ["ai-safety", "genai-suite"]
+}

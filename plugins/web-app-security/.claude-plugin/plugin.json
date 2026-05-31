@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "web-app-security",
+  "description": "Web application security testing: OWASP Web Top 10 assessment, access-control/IDOR testing, and injection testing.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["web", "appsec", "owasp", "wstg", "xss", "sqli", "access-control"]
+}

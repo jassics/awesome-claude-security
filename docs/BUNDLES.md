@@ -53,6 +53,7 @@ Each bundle lists its **intended** members. Only the ✅ members are wired today
 | --- | --- |
 | `pentester` ✅ | `security-reporting` ✅, `security-diagramming` ✅, `threat-modeling` ✅, `osint` ⬜, `web-app-security` ⬜, `network-security` ⬜ |
 | `ai-safety-engineer` ✅ | `ai-safety` ✅, `security-reporting` ✅, `security-diagramming` ✅ |
+| `responsible-ai-officer` ✅ | `ai-safety` ✅, `security-reporting` ✅, `security-diagramming` ✅ |
 | `red-team` | `osint`, `network-security`, `threat-intelligence`, `detection-engineering`, `security-reporting` |
 | `security-analyst` | `dfir`, `detection-engineering`, `threat-intelligence`, `security-reporting` |
 | `security-engineer` | `sast-sca`, `cloud-security`, `k8s-security`, `security-reporting` |
@@ -68,7 +69,8 @@ Each bundle lists its **intended** members. Only the ✅ members are wired today
 | Suite | Intended dependencies |
 | --- | --- |
 | `genai-suite` ✅ | `llm-security` ✅, `rag-security` ✅, `agentic-ai-security` ✅, `multimodal-security` ✅, `mlops-security` ⬜ |
-| `appsec-suite` | `web-app-security`, `api-security`, `mobile-security`, `sast-sca` |
+| `appsec-suite` ✅ | `web-app-security` ✅, `api-security` ✅, `mobile-security` ✅, `sast-sca` ✅ |
+| `ai-safety-suite` ✅ | `ai-safety` ✅, `genai-suite` ✅ *(safety + GenAI security — a suite-of-suites)* |
 | `cloud-suite` | `cloud-security`, `k8s-security`, `infrastructure-security` |
 | `blueops-suite` | `detection-engineering`, `dfir`, `threat-intelligence` |
 
