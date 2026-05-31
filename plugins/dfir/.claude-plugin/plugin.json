@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "dfir",
+  "description": "Digital forensics & incident response: drive the IR lifecycle (NIST 800-61 / PICERL), forensic evidence triage and timelining, and IOC development.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["dfir", "incident-response", "forensics", "nist-800-61", "ioc", "blue-team", "timeline"]
+}

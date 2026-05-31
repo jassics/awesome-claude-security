@@ -27,9 +27,9 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `infrastructure-security` | ✅ |
 | `sast-sca` | ✅ |
 | `osint` | ⬜ |
-| `dfir` | ⬜ |
-| `detection-engineering` | ⬜ |
-| `threat-intelligence` | ⬜ |
+| `dfir` | ✅ |
+| `detection-engineering` | ✅ |
+| `threat-intelligence` | ✅ |
 | `vulnerability-management` | ⬜ |
 | `supply-chain-security` | ⬜ |
 
@@ -82,9 +82,9 @@ for each bundle's intended members.
 | `appsec-suite` | domain suite | ✅ (deps: web-app, api, mobile, sast-sca) |
 | `ai-safety-suite` | suite | ✅ (deps: ai-safety, genai-suite) |
 | `cloud-suite` | domain suite | ✅ (deps: cloud-security, k8s-security, infrastructure-security) |
+| `blueops-suite` | domain suite | ✅ (deps: detection-engineering, dfir, threat-intelligence) |
 | `red-team` · `security-analyst` · `security-engineer` · `security-architect` | role | ⬜ |
 | `grc` · `blue-team` · `soc-siem` · `ciso-toolkit` · `cto-security` | role | ⬜ |
-| `blueops-suite` | domain suite | ⬜ |
 
 ## Cross-cutting workstreams
 

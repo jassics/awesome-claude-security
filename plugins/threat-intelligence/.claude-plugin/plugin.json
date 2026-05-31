@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "threat-intelligence",
+  "description": "Cyber threat intelligence: run the CTI lifecycle with structured analysis, enrich and pivot on IOCs, and profile threat actors/campaigns (ATT&CK, Diamond Model).",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["cti", "threat-intel", "mitre-attack", "diamond-model", "ioc", "actor-profiling", "blue-team"]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "detection-engineering",
+  "description": "Detection engineering: detection-as-code rule development (Sigma/YARA/KQL/SPL), ATT&CK coverage gap analysis, and hypothesis-driven threat hunting.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["detection", "sigma", "yara", "mitre-attack", "threat-hunting", "blue-team", "siem"]
+}

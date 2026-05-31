@@ -93,6 +93,30 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "detection-engineering",
+      "source": "detection-engineering",
+      "description": "Detection engineering: detection-as-code rule development (Sigma/YARA/KQL/SPL), ATT&CK coverage gap analysis, and hypothesis-driven threat hunting.",
+      "category": "domain",
+      "keywords": ["detection", "sigma", "yara", "mitre-attack", "threat-hunting", "siem"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "dfir",
+      "source": "dfir",
+      "description": "Digital forensics & incident response: drive the IR lifecycle (NIST 800-61 / PICERL), forensic evidence triage and timelining, and IOC development.",
+      "category": "domain",
+      "keywords": ["dfir", "incident-response", "forensics", "nist-800-61", "ioc"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "threat-intelligence",
+      "source": "threat-intelligence",
+      "description": "Cyber threat intelligence: run the CTI lifecycle with structured analysis, enrich and pivot on IOCs, and profile threat actors/campaigns (ATT&CK, Diamond Model).",
+      "category": "domain",
+      "keywords": ["cti", "threat-intel", "mitre-attack", "diamond-model", "actor-profiling"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "llm-security",
       "source": "llm-security",
       "description": "OWASP LLM Top 10 assessment, prompt-injection testing, and threat modeling for LLM, RAG, and agentic AI systems.",
@@ -186,6 +210,14 @@
       "description": "Trustworthy-AI suite: pairs AI safety with the full GenAI security stack (ai-safety + genai-suite).",
       "category": "suite",
       "keywords": ["suite", "bundle", "trustworthy-ai", "ai-safety", "ai-security"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "blueops-suite",
+      "source": "blueops-suite",
+      "description": "Defensive operations suite: one-shot install of detection-engineering, dfir, and threat-intelligence.",
+      "category": "suite",
+      "keywords": ["suite", "bundle", "blue-team", "soc", "detection", "dfir", "threat-intel"],
       "license": "GPL-3.0"
     }
   ]
