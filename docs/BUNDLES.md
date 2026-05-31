@@ -71,7 +71,7 @@ Each bundle lists its **intended** members. Only the ✅ members are wired today
 | `genai-suite` ✅ | `llm-security` ✅, `rag-security` ✅, `agentic-ai-security` ✅, `multimodal-security` ✅, `mlops-security` ⬜ |
 | `appsec-suite` ✅ | `web-app-security` ✅, `api-security` ✅, `mobile-security` ✅, `sast-sca` ✅ |
 | `ai-safety-suite` ✅ | `ai-safety` ✅, `genai-suite` ✅ *(safety + GenAI security — a suite-of-suites)* |
-| `cloud-suite` | `cloud-security`, `k8s-security`, `infrastructure-security` |
+| `cloud-suite` ✅ | `cloud-security` ✅, `k8s-security` ✅, `infrastructure-security` ✅ |
 | `blueops-suite` | `detection-engineering`, `dfir`, `threat-intelligence` |
 
 ## Choosing granular vs bundled

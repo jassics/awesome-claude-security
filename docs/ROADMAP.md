@@ -24,7 +24,7 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `network-security` | ⬜ |
 | `cloud-security` | ✅ |
 | `k8s-security` | ✅ |
-| `infrastructure-security` | ⬜ |
+| `infrastructure-security` | ✅ |
 | `sast-sca` | ✅ |
 | `osint` | ⬜ |
 | `dfir` | ⬜ |
@@ -81,9 +81,10 @@ for each bundle's intended members.
 | `responsible-ai-officer` | role | ✅ (deps: ai-safety, reporting, diagramming) |
 | `appsec-suite` | domain suite | ✅ (deps: web-app, api, mobile, sast-sca) |
 | `ai-safety-suite` | suite | ✅ (deps: ai-safety, genai-suite) |
+| `cloud-suite` | domain suite | ✅ (deps: cloud-security, k8s-security, infrastructure-security) |
 | `red-team` · `security-analyst` · `security-engineer` · `security-architect` | role | ⬜ |
 | `grc` · `blue-team` · `soc-siem` · `ciso-toolkit` · `cto-security` | role | ⬜ |
-| `cloud-suite` · `blueops-suite` | domain suite | ⬜ |
+| `blueops-suite` | domain suite | ⬜ |
 
 ## Cross-cutting workstreams
 

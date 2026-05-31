@@ -85,6 +85,14 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "infrastructure-security",
+      "source": "infrastructure-security",
+      "description": "Infrastructure security: Infrastructure-as-Code (IaC) security review, host/OS hardening against CIS benchmarks, and secrets-management review.",
+      "category": "domain",
+      "keywords": ["infrastructure", "iac", "terraform", "cis", "hardening", "secrets"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "llm-security",
       "source": "llm-security",
       "description": "OWASP LLM Top 10 assessment, prompt-injection testing, and threat modeling for LLM, RAG, and agentic AI systems.",
@@ -154,6 +162,14 @@
       "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM, RAG, agentic, multimodal).",
       "category": "suite",
       "keywords": ["suite", "bundle", "genai", "ai-security", "llm"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "cloud-suite",
+      "source": "cloud-suite",
+      "description": "Domain suite: one-shot install of cloud-security, k8s-security, and infrastructure-security.",
+      "category": "suite",
+      "keywords": ["suite", "bundle", "cloud", "kubernetes", "iac", "infrastructure"],
       "license": "GPL-3.0"
     },
     {

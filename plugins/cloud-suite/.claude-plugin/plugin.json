@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "cloud-suite",
+  "description": "Cloud & infrastructure suite: one-shot install of cloud-security, k8s-security, and infrastructure-security.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["suite", "bundle", "cloud", "kubernetes", "iac", "infrastructure", "devsecops"],
+  "dependencies": ["cloud-security", "k8s-security", "infrastructure-security"]
+}
