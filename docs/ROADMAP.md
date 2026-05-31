@@ -58,7 +58,7 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | --- | --- |
 | `pentester` | ✅ |
 | `red-team` | ⬜ |
-| `security-analyst` | ⬜ |
+| `security-analyst` | ✅ |
 | `security-engineer` | ⬜ |
 | `security-architect` | ✅ |
 | `grc` | ⬜ |
@@ -86,7 +86,8 @@ for each bundle's intended members.
 | `blue-team` | role | ✅ (deps: blueops-suite, reporting, diagramming) |
 | `soc-siem` | role | ✅ (deps: blueops-suite, reporting) |
 | `security-architect` | role | ✅ (deps: threat-modeling, diagramming, reporting) |
-| `red-team` · `security-analyst` · `security-engineer` | role | ⬜ |
+| `security-analyst` | role | ✅ (deps: blueops-suite, reporting, diagramming) |
+| `red-team` · `security-engineer` | role | ⬜ |
 | `grc` · `ciso-toolkit` · `cto-security` | role | ⬜ |
 
 ## Cross-cutting workstreams

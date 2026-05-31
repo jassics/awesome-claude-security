@@ -205,6 +205,14 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "security-analyst",
+      "source": "security-analyst",
+      "description": "Security analyst role bundle: investigation and analysis (T2/T3) — correlate telemetry, enrich with intel, reconstruct timelines, and reach evidence-backed verdicts. Auto-installs the defensive stack.",
+      "category": "role",
+      "keywords": ["security-analyst", "investigation", "analysis", "role", "bundle"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "genai-suite",
       "source": "genai-suite",
       "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM, RAG, agentic, multimodal).",
