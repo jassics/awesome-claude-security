@@ -51,10 +51,10 @@ Each bundle lists its **intended** members. Only the ✅ members are wired today
 
 | Role bundle | Intended dependencies |
 | --- | --- |
-| `pentester` ✅ | `security-reporting` ✅, `security-diagramming` ✅, `threat-modeling` ✅, `osint` ⬜, `web-app-security` ⬜, `network-security` ⬜ |
+| `pentester` ✅ | `osint` ✅, `web-app-security` ✅, `network-security` ✅, `threat-modeling` ✅, `security-reporting` ✅, `security-diagramming` ✅ |
+| `red-team` ✅ | `osint` ✅, `network-security` ✅, `threat-intelligence` ✅, `security-reporting` ✅, `security-diagramming` ✅ |
 | `ai-safety-engineer` ✅ | `ai-safety` ✅, `security-reporting` ✅, `security-diagramming` ✅ |
 | `responsible-ai-officer` ✅ | `ai-safety` ✅, `security-reporting` ✅, `security-diagramming` ✅ |
-| `red-team` | `osint`, `network-security`, `threat-intelligence`, `detection-engineering`, `security-reporting` |
 | `grc` | `security-reporting`, `security-knowledge` |
 | `blue-team` ✅ | `blueops-suite` ✅ (→ detection-engineering, dfir, threat-intelligence), `security-reporting` ✅, `security-diagramming` ✅ |
 | `soc-siem` ✅ | `blueops-suite` ✅ (→ detection-engineering, dfir, threat-intelligence), `security-reporting` ✅ |

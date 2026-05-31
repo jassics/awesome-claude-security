@@ -21,12 +21,12 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `web-app-security` | ✅ |
 | `api-security` | ✅ |
 | `mobile-security` | ✅ |
-| `network-security` | ⬜ |
+| `network-security` | ✅ |
 | `cloud-security` | ✅ |
 | `k8s-security` | ✅ |
 | `infrastructure-security` | ✅ |
 | `sast-sca` | ✅ |
-| `osint` | ⬜ |
+| `osint` | ✅ |
 | `dfir` | ✅ |
 | `detection-engineering` | ✅ |
 | `threat-intelligence` | ✅ |
@@ -57,7 +57,7 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | Plugin | Status |
 | --- | --- |
 | `pentester` | ✅ |
-| `red-team` | ⬜ |
+| `red-team` | ✅ |
 | `security-analyst` | ✅ |
 | `security-engineer` | ✅ |
 | `security-architect` | ✅ |
@@ -75,7 +75,7 @@ for each bundle's intended members.
 
 | Bundle | Kind | Status |
 | --- | --- | --- |
-| `pentester` | role | ✅ (deps: reporting, diagramming, threat-modeling) |
+| `pentester` | role | ✅ (deps: osint, web-app-security, network-security, threat-modeling, reporting, diagramming) |
 | `ai-safety-engineer` | role | ✅ (deps: ai-safety, reporting, diagramming) |
 | `genai-suite` | domain suite | ✅ (deps: llm-security, rag-security, agentic-ai-security, multimodal-security) |
 | `responsible-ai-officer` | role | ✅ (deps: ai-safety, reporting, diagramming) |
@@ -88,7 +88,8 @@ for each bundle's intended members.
 | `security-architect` | role | ✅ (deps: threat-modeling, diagramming, reporting) |
 | `security-analyst` | role | ✅ (deps: blueops-suite, reporting, diagramming) |
 | `security-engineer` | role | ✅ (deps: sast-sca, cloud-suite, reporting) |
-| `red-team` · `grc` · `ciso-toolkit` · `cto-security` | role | ⬜ |
+| `red-team` | role | ✅ (deps: osint, network-security, threat-intelligence, reporting, diagramming) |
+| `grc` · `ciso-toolkit` · `cto-security` | role | ⬜ |
 
 ## Cross-cutting workstreams
 
