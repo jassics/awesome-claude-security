@@ -55,12 +55,12 @@ Each bundle lists its **intended** members. Only the ✅ members are wired today
 | `ai-safety-engineer` ✅ | `ai-safety` ✅, `security-reporting` ✅, `security-diagramming` ✅ |
 | `responsible-ai-officer` ✅ | `ai-safety` ✅, `security-reporting` ✅, `security-diagramming` ✅ |
 | `red-team` | `osint`, `network-security`, `threat-intelligence`, `detection-engineering`, `security-reporting` |
-| `security-engineer` | `sast-sca`, `cloud-security`, `k8s-security`, `security-reporting` |
 | `grc` | `security-reporting`, `security-knowledge` |
 | `blue-team` ✅ | `blueops-suite` ✅ (→ detection-engineering, dfir, threat-intelligence), `security-reporting` ✅, `security-diagramming` ✅ |
 | `soc-siem` ✅ | `blueops-suite` ✅ (→ detection-engineering, dfir, threat-intelligence), `security-reporting` ✅ |
 | `security-architect` ✅ | `threat-modeling` ✅, `security-diagramming` ✅, `security-reporting` ✅ |
 | `security-analyst` ✅ | `blueops-suite` ✅ (→ detection-engineering, dfir, threat-intelligence), `security-reporting` ✅, `security-diagramming` ✅ |
+| `security-engineer` ✅ | `sast-sca` ✅, `cloud-suite` ✅ (→ cloud-security, k8s-security, infrastructure-security), `security-reporting` ✅ |
 | `ciso-toolkit` | `security-reporting`, `security-diagramming`, `threat-modeling` |
 | `cto-security` | `threat-modeling`, `security-diagramming`, `security-reporting` |
 

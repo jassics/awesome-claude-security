@@ -213,6 +213,14 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "security-engineer",
+      "source": "security-engineer",
+      "description": "Security engineer role bundle: build and harden — DevSecOps, secure CI/CD pipelines, control implementation, and remediation across code, cloud, and infrastructure. Auto-installs its stack.",
+      "category": "role",
+      "keywords": ["security-engineer", "devsecops", "hardening", "ci-cd", "role", "bundle"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "genai-suite",
       "source": "genai-suite",
       "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM, RAG, agentic, multimodal).",
