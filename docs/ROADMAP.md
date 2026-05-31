@@ -64,8 +64,8 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `grc` | ⬜ |
 | `blue-team` | ✅ |
 | `soc-siem` | ✅ |
-| `ciso-toolkit` (board decks, strategy, risk narratives) | ⬜ |
-| `cto-security` (tech strategy, secure-by-design) | ⬜ |
+| `ciso-toolkit` (executive — board decks, strategy, risk narratives) | ✅ |
+| `cto-security` (executive — tech strategy, secure-by-design) | ✅ |
 
 ## Bundles (roles + domain suites)
 
@@ -89,7 +89,9 @@ for each bundle's intended members.
 | `security-analyst` | role | ✅ (deps: blueops-suite, reporting, diagramming) |
 | `security-engineer` | role | ✅ (deps: sast-sca, cloud-suite, reporting) |
 | `red-team` | role | ✅ (deps: osint, network-security, threat-intelligence, reporting, diagramming) |
-| `grc` · `ciso-toolkit` · `cto-security` | role | ⬜ |
+| `ciso-toolkit` | executive | ✅ (deps: reporting, diagramming, threat-modeling) |
+| `cto-security` | executive | ✅ (deps: threat-modeling, diagramming, reporting) |
+| `grc` | role | ⬜ |
 
 ## Cross-cutting workstreams
 

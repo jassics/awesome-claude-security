@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "cto-security",
+  "description": "CTO security advisor: secure-by-design at scale (paved roads, guardrails, enablement) and technology-risk assessment for strategic decisions. Auto-installs threat-modeling, diagramming, reporting.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["cto", "executive", "secure-by-design", "tech-strategy", "paved-road", "role"],
+  "dependencies": ["threat-modeling", "security-diagramming", "security-reporting"]
+}

@@ -106,8 +106,18 @@ Each role plugin ships a primary agent persona + a handful of role-specific skil
 | `blue-team` | Defense & hardening | `detection-engineering`, `dfir` |
 | `soc-siem` | Monitoring & response | `detection-engineering`, `dfir` |
 | `ai-safety-engineer` | AI safety build & operate | `ai-safety`, `security-reporting`, `security-diagramming` |
-| `ciso-toolkit` | Strategy & board comms | `security-reporting`, `security-diagramming` |
-| `cto-security` | Tech strategy | `threat-modeling`, `security-diagramming` |
+
+## Executive (strategic tier)
+
+Persona bundles for security leadership. Same bundle mechanics as roles, but
+categorized `executive` in the catalog to mark the strategic altitude — they
+synthesize the operational plugins' outputs into strategy, risk, and communication
+rather than running tools.
+
+| Plugin | Focus | Composes |
+| --- | --- | --- |
+| `ciso-toolkit` | Security strategy, cyber-risk quantification, board/exec decks | `security-reporting`, `security-diagramming`, `threat-modeling` |
+| `cto-security` | Secure-by-design at scale, technology-risk decisions | `threat-modeling`, `security-diagramming`, `security-reporting` |
 
 ## Bundles vs. à-la-carte
 

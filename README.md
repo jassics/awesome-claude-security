@@ -31,7 +31,7 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 | **AI safety** | Preventing AI systems from causing harm (a *distinct* discipline — [see why](docs/TAXONOMY.md#ai-security-vs-ai-safety)) | `ai-safety`, `ai-safety-engineer` |
 | **Role** | Persona bundles that combine domains + workflow | `pentester`, `ai-safety-engineer`, security analyst, engineer, architect, GRC, blue team, SOC/SIEM, CISO/CTO |
 
-### Shipped today (34 plugins)
+### Shipped today (36 plugins)
 
 **Core** — [`security-diagramming`](plugins/security-diagramming/) (attack trees, DFDs, architecture diagrams, mindmaps, infographics) · [`security-reporting`](plugins/security-reporting/) (findings, pentest reports, exec summaries, CVSS).
 
@@ -42,6 +42,8 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 **AI safety** *(≠ security — [see why](docs/TAXONOMY.md#ai-security-vs-ai-safety))* — [`ai-safety`](plugins/ai-safety/) (harm modeling, safety evals, responsible red-team, bias/fairness, guardrails, RAI governance).
 
 **Roles** *(auto-install their stack)* — [`pentester`](plugins/pentester/) · [`red-team`](plugins/red-team/) (adversary emulation, ATT&CK) · [`blue-team`](plugins/blue-team/) (threat-informed defense + purple teaming) · [`soc-siem`](plugins/soc-siem/) (alert triage, monitoring) · [`security-analyst`](plugins/security-analyst/) (investigation & analysis, T2/T3) · [`security-architect`](plugins/security-architect/) (secure-by-design, design review) · [`security-engineer`](plugins/security-engineer/) (DevSecOps, harden, secure pipelines) · [`ai-safety-engineer`](plugins/ai-safety-engineer/) · [`responsible-ai-officer`](plugins/responsible-ai-officer/) (AI governance, EU AI Act risk-tiering).
+
+**Executive** *(strategic tier)* — [`ciso-toolkit`](plugins/ciso-toolkit/) (security strategy, cyber-risk quantification, board decks) · [`cto-security`](plugins/cto-security/) (secure-by-design at scale, tech-risk assessment).
 
 **Suites** *(one-shot bundles)* — [`genai-suite`](plugins/genai-suite/) (all GenAI security) · [`appsec-suite`](plugins/appsec-suite/) (web+api+mobile+SAST/SCA) · [`cloud-suite`](plugins/cloud-suite/) (cloud+k8s+infrastructure) · [`blueops-suite`](plugins/blueops-suite/) (detection+dfir+threat-intel) · [`ai-safety-suite`](plugins/ai-safety-suite/) (safety + GenAI security together).
 

@@ -245,6 +245,22 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "ciso-toolkit",
+      "source": "ciso-toolkit",
+      "description": "CISO executive toolkit: security strategy & roadmap, cyber-risk quantification, and board/executive decks. Auto-installs reporting, diagramming, and threat-modeling.",
+      "category": "executive",
+      "keywords": ["ciso", "executive", "strategy", "risk-quantification", "board", "governance"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "cto-security",
+      "source": "cto-security",
+      "description": "CTO security advisor: secure-by-design at scale (paved roads, guardrails, enablement) and technology-risk assessment for strategic decisions. Auto-installs threat-modeling, diagramming, reporting.",
+      "category": "executive",
+      "keywords": ["cto", "executive", "secure-by-design", "tech-strategy", "paved-road"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "genai-suite",
       "source": "genai-suite",
       "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM, RAG, agentic, multimodal).",
