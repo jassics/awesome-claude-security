@@ -197,6 +197,14 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "security-architect",
+      "source": "security-architect",
+      "description": "Security architect role bundle: secure-by-design architecture and design review, threat modeling, control selection, and trust-boundary analysis. Auto-installs its core stack.",
+      "category": "role",
+      "keywords": ["security-architect", "secure-by-design", "design-review", "role", "bundle"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "genai-suite",
       "source": "genai-suite",
       "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM, RAG, agentic, multimodal).",

@@ -60,7 +60,7 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `red-team` | ⬜ |
 | `security-analyst` | ⬜ |
 | `security-engineer` | ⬜ |
-| `security-architect` | ⬜ |
+| `security-architect` | ✅ |
 | `grc` | ⬜ |
 | `blue-team` | ✅ |
 | `soc-siem` | ✅ |
@@ -85,7 +85,8 @@ for each bundle's intended members.
 | `blueops-suite` | domain suite | ✅ (deps: detection-engineering, dfir, threat-intelligence) |
 | `blue-team` | role | ✅ (deps: blueops-suite, reporting, diagramming) |
 | `soc-siem` | role | ✅ (deps: blueops-suite, reporting) |
-| `red-team` · `security-analyst` · `security-engineer` · `security-architect` | role | ⬜ |
+| `security-architect` | role | ✅ (deps: threat-modeling, diagramming, reporting) |
+| `red-team` · `security-analyst` · `security-engineer` | role | ⬜ |
 | `grc` · `ciso-toolkit` · `cto-security` | role | ⬜ |
 
 ## Cross-cutting workstreams
