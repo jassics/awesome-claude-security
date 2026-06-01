@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "mlops-security",
+  "description": "Security for the ML/AI lifecycle and infrastructure: ML supply chain (model/dataset provenance, unsafe deserialization), training/MLOps pipeline security, and model-serving/inference endpoint hardening.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["mlops", "ml-security", "model-supply-chain", "model-serving", "data-poisoning", "pickle", "genai", "mlsecops"]
+}

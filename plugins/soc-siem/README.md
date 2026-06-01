@@ -16,6 +16,12 @@ core reporting, and adds a SOC-analyst persona + an alert-triage skill.
 Auto-installs: `blueops-suite` (→ `detection-engineering`, `dfir`,
 `threat-intelligence`), `security-reporting`.
 
+## Command
+
+| Command | What it runs |
+| --- | --- |
+| `/soc-siem:triage` | Triage an alert end-to-end: validate → enrich → decide → escalate/close. |
+
 ## Skills
 
 | Skill | When it fires |

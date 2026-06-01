@@ -15,6 +15,12 @@ and `security-reporting`, and adds a CTO-advisor persona + strategy skills.
 /plugin install cto-security@awesome-claude-security
 ```
 
+## Command
+
+| Command | What it runs |
+| --- | --- |
+| `/cto-security:tech-review` | Tech-risk assessment + secure-by-design path for a decision. |
+
 ## Skills
 
 | Skill | When it fires |

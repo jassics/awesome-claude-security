@@ -29,6 +29,22 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "security-integrations",
+      "source": "security-integrations",
+      "description": "Publish security work where teams live: findings to Jira, reports/runbooks to Confluence, and reports/diagrams to Google Drive (Atlassian MCP wired).",
+      "category": "core",
+      "keywords": ["integrations", "jira", "confluence", "google-drive", "mcp", "publishing"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "security-knowledge",
+      "source": "security-knowledge",
+      "description": "Shared reference packs for consistent mapping: MITRE ATT&CK lookup, OWASP Top 10 families (Web/API/LLM/Mobile), and cross-framework crosswalks (CWE, NIST, CIS, ISO 27001).",
+      "category": "core",
+      "keywords": ["reference", "mitre-attack", "owasp", "cwe", "nist", "iso-27001", "mapping"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "threat-modeling",
       "source": "threat-modeling",
       "description": "STRIDE / PASTA threat modeling, data flow diagrams, attack trees, and risk-ranked mitigations.",
@@ -133,6 +149,22 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "vulnerability-management",
+      "source": "vulnerability-management",
+      "description": "Risk-based vulnerability management: triage and dedupe scanner output, prioritize with CVSS/EPSS/CISA KEV + asset context, and track remediation against SLAs.",
+      "category": "domain",
+      "keywords": ["vulnerability-management", "cvss", "epss", "kev", "prioritization", "remediation"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "supply-chain-security",
+      "source": "supply-chain-security",
+      "description": "Software supply-chain security: dependency trust review (typosquatting/dependency-confusion/maintainer risk), artifact provenance & signing (SLSA/Sigstore), and CI/CD pipeline integrity.",
+      "category": "domain",
+      "keywords": ["supply-chain", "slsa", "sigstore", "provenance", "dependency-confusion", "ci-cd"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "llm-security",
       "source": "llm-security",
       "description": "OWASP LLM Top 10 assessment, prompt-injection testing, and threat modeling for LLM, RAG, and agentic AI systems.",
@@ -162,6 +194,14 @@
       "description": "Security for multimodal AI: cross-modal injection testing (image/audio/document) and input-handling review across modalities.",
       "category": "genai",
       "keywords": ["multimodal", "genai", "image-injection", "ocr", "adversarial"],
+      "license": "GPL-3.0"
+    },
+    {
+      "name": "mlops-security",
+      "source": "mlops-security",
+      "description": "Security for the ML lifecycle and infrastructure: ML supply chain (model/dataset provenance, unsafe deserialization), training/MLOps pipeline security, and model-serving hardening.",
+      "category": "genai",
+      "keywords": ["mlops", "ml-security", "model-supply-chain", "model-serving", "data-poisoning", "genai"],
       "license": "GPL-3.0"
     },
     {
@@ -271,7 +311,7 @@
     {
       "name": "genai-suite",
       "source": "genai-suite",
-      "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM, RAG, agentic, multimodal).",
+      "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM, RAG, agentic, multimodal, MLOps).",
       "category": "suite",
       "keywords": ["suite", "bundle", "genai", "ai-security", "llm"],
       "license": "GPL-3.0"

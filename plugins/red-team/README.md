@@ -18,6 +18,12 @@ adds a red-team operator persona + an adversary-emulation skill.
 Auto-installs: `osint`, `network-security`, `threat-intelligence`,
 `security-reporting`, `security-diagramming`.
 
+## Command
+
+| Command | What it runs |
+| --- | --- |
+| `/red-team:operation` | Objectives-based emulation: intel → ATT&CK TTPs → recon → emulate → report. |
+
 ## Skills
 
 | Skill | When it fires |

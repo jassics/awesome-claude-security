@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "red-team",
   "description": "Red-team role bundle: objectives-based adversary emulation aligned to real threat-actor TTPs (ATT&CK), from recon to impact. Auto-installs its offensive + intel stack.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": { "name": "Jassics", "email": "jassics@gmail.com" },
   "license": "GPL-3.0",
   "keywords": ["red-team", "adversary-emulation", "offensive", "role", "bundle", "mitre-attack", "ttp"],

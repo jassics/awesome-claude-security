@@ -1,0 +1,44 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  structure:
+    name: Structural invariants
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate marketplace structure
+        run: python3 scripts/validate-marketplace.py
+
+  manifests:
+    name: Plugin manifest schema (claude plugin validate)
+    runs-on: ubuntu-latest
+    # Best-effort: the structural job above is the authoritative gate. This adds
+    # the official schema check when the CLI is installable in CI.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Validate every plugin manifest (--strict)
+        run: |
+          set -e
+          fail=0
+          for dir in plugins/*/; do
+            name="$(basename "$dir")"
+            echo "::group::validate $name"
+            if ! claude plugin validate "./$dir" --strict; then
+              echo "::error::$name failed claude plugin validate --strict"
+              fail=1
+            fi
+            echo "::endgroup::"
+          done
+          exit $fail

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "security-integrations",
+  "description": "Publish security work where teams already live: turn findings into Jira issues, push reports/runbooks to Confluence, and export reports/diagrams to Google Drive. Wires the Atlassian MCP server.",
+  "version": "0.1.0",
+  "author": { "name": "Jassics", "email": "jassics@gmail.com" },
+  "license": "GPL-3.0",
+  "keywords": ["integrations", "jira", "confluence", "google-drive", "mcp", "ticketing", "publishing"]
+}
