@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "ciso-toolkit",
   "description": "CISO executive toolkit: security strategy & roadmap, cyber-risk quantification, and board/executive decks. Auto-installs reporting, diagramming, and threat-modeling.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": { "name": "Jassics", "email": "jassics@gmail.com" },
   "license": "GPL-3.0",
   "keywords": ["ciso", "executive", "strategy", "risk-quantification", "board", "governance", "role"],

@@ -17,6 +17,12 @@ domain plugins for whatever you're reviewing (cloud, appsec, k8s, GenAI…).
 
 Auto-installs: `threat-modeling`, `security-diagramming`, `security-reporting`.
 
+## Command
+
+| Command | What it runs |
+| --- | --- |
+| `/security-architect:design-review` | Design review: threat-model → diagram → select controls → verdict. |
+
 ## Skills
 
 | Skill | When it fires |

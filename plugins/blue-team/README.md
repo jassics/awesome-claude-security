@@ -17,6 +17,12 @@ underlying plugin is also installable on its own.
 Auto-installs: `blueops-suite` (→ `detection-engineering`, `dfir`,
 `threat-intelligence`), `security-reporting`, `security-diagramming`.
 
+## Command
+
+| Command | What it runs |
+| --- | --- |
+| `/blue-team:defend` | Threat-informed defense cycle: coverage → hunt → detect → purple-team validate. |
+
 ## Skills
 
 | Skill | When it fires |

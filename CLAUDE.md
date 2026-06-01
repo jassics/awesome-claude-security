@@ -26,7 +26,12 @@ The **taxonomy is the key mental model**: *core* plugins (diagramming, reporting
 ## Common commands
 
 ```bash
-# Validate a plugin manifest + component frontmatter before committing
+# Validate the whole marketplace's structural invariants (catalog<->dir parity,
+# dependency existence, naming, skill/agent frontmatter). Pure stdlib, no deps.
+# This is the CI gate (.github/workflows/validate.yml) — run it before committing.
+python3 scripts/validate-marketplace.py
+
+# Validate a single plugin manifest + component frontmatter against the schema
 claude plugin validate ./plugins/<name> --strict
 
 # Smoke-test locally
@@ -34,7 +39,7 @@ claude plugin validate ./plugins/<name> --strict
 /plugin install <name>@awesome-claude-security
 ```
 
-There is no build/test/lint toolchain yet; correctness is checked via `claude plugin validate` and manual smoke-testing.
+Correctness is enforced by `scripts/validate-marketplace.py` (structural invariants, run in CI) plus `claude plugin validate --strict` (manifest schema) and manual smoke-testing.
 
 ## Scope
 

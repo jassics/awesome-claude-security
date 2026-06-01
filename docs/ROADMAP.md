@@ -10,8 +10,8 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | --- | --- |
 | `security-diagramming` | ✅ |
 | `security-reporting` | ✅ |
-| `security-integrations` (Jira / Confluence / Google Drive) | ⬜ |
-| `security-knowledge` (ATT&CK, OWASP, CWE, NIST reference packs) | ⬜ |
+| `security-integrations` (Jira / Confluence / Google Drive) | ✅ |
+| `security-knowledge` (ATT&CK, OWASP, CWE, NIST reference packs) | ✅ |
 
 ## Domain
 
@@ -30,8 +30,8 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `dfir` | ✅ |
 | `detection-engineering` | ✅ |
 | `threat-intelligence` | ✅ |
-| `vulnerability-management` | ⬜ |
-| `supply-chain-security` | ⬜ |
+| `vulnerability-management` | ✅ |
+| `supply-chain-security` | ✅ |
 
 ## GenAI
 
@@ -41,7 +41,7 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `rag-security` | ✅ |
 | `agentic-ai-security` | ✅ |
 | `multimodal-security` | ✅ |
-| `mlops-security` | ⬜ |
+| `mlops-security` | ✅ |
 
 ## AI safety (distinct from GenAI security — see [TAXONOMY](TAXONOMY.md#ai-security-vs-ai-safety))
 
@@ -77,7 +77,7 @@ for each bundle's intended members.
 | --- | --- | --- |
 | `pentester` | role | ✅ (deps: osint, web-app-security, network-security, threat-modeling, reporting, diagramming) |
 | `ai-safety-engineer` | role | ✅ (deps: ai-safety, reporting, diagramming) |
-| `genai-suite` | domain suite | ✅ (deps: llm-security, rag-security, agentic-ai-security, multimodal-security) |
+| `genai-suite` | domain suite | ✅ (deps: llm-security, rag-security, agentic-ai-security, multimodal-security, mlops-security) |
 | `responsible-ai-officer` | role | ✅ (deps: ai-safety, reporting, diagramming) |
 | `appsec-suite` | domain suite | ✅ (deps: web-app, api, mobile, sast-sca) |
 | `ai-safety-suite` | suite | ✅ (deps: ai-safety, genai-suite) |
@@ -92,7 +92,6 @@ for each bundle's intended members.
 | `grc` | role | ✅ (deps: reporting, diagramming) |
 | `ciso-toolkit` | executive | ✅ (deps: reporting, diagramming, threat-modeling) |
 | `cto-security` | executive | ✅ (deps: threat-modeling, diagramming, reporting) |
-| `grc` | role | ⬜ |
 
 ## Cross-cutting workstreams
 

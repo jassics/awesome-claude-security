@@ -18,6 +18,12 @@ and adds an engineer persona + a secure-pipeline skill.
 Auto-installs: `sast-sca`, `cloud-suite` (→ `cloud-security`, `k8s-security`,
 `infrastructure-security`), `security-reporting`.
 
+## Command
+
+| Command | What it runs |
+| --- | --- |
+| `/security-engineer:harden` | Harden code/pipeline/cloud/infra, then prioritize & track remediation. |
+
 ## Skills
 
 | Skill | When it fires |

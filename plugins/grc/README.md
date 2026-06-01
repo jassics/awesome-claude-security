@@ -15,6 +15,12 @@ operational plugins' evidence rather than running scans.
 /plugin install grc@awesome-claude-security
 ```
 
+## Command
+
+| Command | What it runs |
+| --- | --- |
+| `/grc:assessment` | Framework gap-assessment → risk → policy gaps → remediation report. |
+
 ## Skills
 
 | Skill | When it fires |

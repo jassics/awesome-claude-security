@@ -15,6 +15,12 @@ consumes the *outputs* of the operational plugins rather than bundling them.
 /plugin install ciso-toolkit@awesome-claude-security
 ```
 
+## Command
+
+| Command | What it runs |
+| --- | --- |
+| `/ciso-toolkit:board-brief` | Build a board brief: strategy → quantified risk → deck. |
+
 ## Skills
 
 | Skill | When it fires |

@@ -18,6 +18,12 @@ safety-case skill, and **auto-installs** the safety + reporting + diagramming st
 Auto-installs its dependencies: `ai-safety`, `security-reporting`,
 `security-diagramming`. (`claude plugin prune` cleans them up later.)
 
+## Command
+
+| Command | What it runs |
+| --- | --- |
+| `/ai-safety-engineer:safety-review` | AI safety review: harms → evals → guardrails → safety case. |
+
 ## Skills
 
 | Skill | When it fires |

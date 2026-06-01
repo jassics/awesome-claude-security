@@ -17,6 +17,12 @@ core reporting/diagramming, and adds an analyst persona + an investigation skill
 Auto-installs: `blueops-suite` (→ `detection-engineering`, `dfir`,
 `threat-intelligence`), `security-reporting`, `security-diagramming`.
 
+## Command
+
+| Command | What it runs |
+| --- | --- |
+| `/security-analyst:investigate` | Investigation: correlate → enrich → timeline → evidence-backed verdict. |
+
 ## Skills
 
 | Skill | When it fires |

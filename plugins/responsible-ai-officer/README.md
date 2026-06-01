@@ -17,6 +17,12 @@ reporting/diagramming plugins.
 
 Auto-installs: `ai-safety`, `security-reporting`, `security-diagramming`.
 
+## Command
+
+| Command | What it runs |
+| --- | --- |
+| `/responsible-ai-officer:intake` | AI governance intake: capture → risk-tier → assess → governance record. |
+
 ## Skills
 
 | Skill | When it fires |
