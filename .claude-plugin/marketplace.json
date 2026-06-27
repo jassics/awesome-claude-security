@@ -165,6 +165,14 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "claude-config-security",
+      "source": "claude-config-security",
+      "description": "Static security review of a Claude Code / AI-agent configuration (settings, permissions, hooks, MCP servers, agents, skills, CLAUDE.md) via the agentscanner CLI: scan, triage, harden.",
+      "category": "domain",
+      "keywords": ["claude-code", "agentscanner", "config-security", "hooks", "mcp", "permissions", "skills", "supply-chain", "static-analysis"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "llm-security",
       "source": "llm-security",
       "description": "OWASP LLM Top 10 assessment, prompt-injection testing, and threat modeling for LLM, RAG, and agentic AI systems.",

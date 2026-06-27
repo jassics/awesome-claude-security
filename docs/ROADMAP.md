@@ -32,6 +32,7 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `threat-intelligence` | ✅ |
 | `vulnerability-management` | ✅ |
 | `supply-chain-security` | ✅ |
+| `claude-config-security` (drives the [`agentscanner`](https://pypi.org/project/agentscanner/) CLI) | ✅ |
 
 ## GenAI
 

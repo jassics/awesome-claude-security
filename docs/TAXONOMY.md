@@ -50,6 +50,7 @@ Reused by every role and domain. Keep these self-contained and dependency-light.
 | `threat-intelligence` | CTI lifecycle, IOC enrichment, ATT&CK mapping. |
 | `vulnerability-management` | Prioritization, SLAs, remediation tracking. |
 | `supply-chain-security` | SBOM, provenance, SLSA, dependency risk. |
+| `claude-config-security` | Audit the Claude Code config itself (hooks, MCP, permissions, agents, skills, `CLAUDE.md`) via the `agentscanner` CLI. |
 
 ## GenAI security (AI/LLM **security**)
 
