@@ -13,7 +13,7 @@
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 [![Stars](https://img.shields.io/github/stars/jassics/awesome-claude-security?style=social)](https://github.com/jassics/awesome-claude-security/stargazers)
 
-[Quick install](#quick-install) · [What's inside](#whats-inside) · [Taxonomy](docs/TAXONOMY.md) · [Roadmap](docs/ROADMAP.md) · [Recipes](docs/RECIPES.md) · [Contributing](CONTRIBUTING.md)
+[Quick install](#quick-install) · [Getting started](docs/GETTING_STARTED.md) · [What's inside](#whats-inside) · [Taxonomy](docs/TAXONOMY.md) · [Roadmap](docs/ROADMAP.md) · [Recipes](docs/RECIPES.md) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
