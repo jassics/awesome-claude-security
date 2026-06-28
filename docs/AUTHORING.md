@@ -126,6 +126,20 @@ In `.claude-plugin/marketplace.json`, append an entry to `plugins`:
 
 `source` is relative to `metadata.pluginRoot` (`./plugins`), so it's just the directory name.
 
+Once your entry is in `marketplace.json`, the [docs-site plugin catalog](https://jassics.github.io/awesome-claude-security/catalog/) picks it up automatically — that page is generated from `marketplace.json` at build time (`scripts/gen_pages.py`), so there's no separate list to update.
+
+## Docs site (optional, local preview)
+
+The public docs site is [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) built from `docs/` and deployed by `.github/workflows/pages.yml`. To preview locally:
+
+```bash
+pip install -r requirements-docs.txt
+mkdocs serve            # http://127.0.0.1:8000
+mkdocs build --strict   # what CI runs; fails on broken links/anchors
+```
+
+You only need this when changing site structure or docs content — editing plugins never requires touching it.
+
 ## Validate
 
 ```bash

@@ -1,0 +1,113 @@
+site_name: awesome-claude-security
+site_description: >-
+  A Claude Code plugin marketplace for the full cybersecurity & GenAI-security
+  lifecycle — recon, threat modeling, detection, GRC, GenAI security, and CISO strategy.
+site_url: https://jassics.github.io/awesome-claude-security/
+site_author: Jassics
+
+repo_name: jassics/awesome-claude-security
+repo_url: https://github.com/jassics/awesome-claude-security
+edit_uri: edit/main/docs/
+
+copyright: GPL-3.0 · A community project — not affiliated with or endorsed by Anthropic.
+
+docs_dir: docs
+
+# Fail the build (under --strict) on broken internal links and anchors, so CI
+# catches doc regressions before they ship.
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - gen-files:
+      scripts:
+        - scripts/gen_pages.py
+
+hooks:
+  - scripts/mkdocs_hooks.py
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Getting started: GETTING_STARTED.md
+  - Plugin catalog: catalog.md
+  - Install & use: INSTALL.md
+  - Recipes: RECIPES.md
+  - Bundles: BUNDLES.md
+  - Taxonomy: TAXONOMY.md
+  - Roadmap: ROADMAP.md
+  - Authoring: AUTHORING.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jassics/awesome-claude-security
+      name: awesome-claude-security on GitHub

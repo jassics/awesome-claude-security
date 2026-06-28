@@ -1,0 +1,5 @@
+# Documentation site (MkDocs Material). Install with:
+#   pip install -r requirements-docs.txt
+# then `mkdocs serve` for local preview or `mkdocs build` for the static site.
+mkdocs-material>=9.5
+mkdocs-gen-files>=0.5
