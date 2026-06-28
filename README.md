@@ -1,12 +1,29 @@
+<div align="center">
+
+<img src="assets/banner.png" alt="Awesome Claude Security — Claude Code Plugin Marketplace" width="100%">
+
 # awesome-claude-security
 
-A **Claude Code plugin marketplace** of skills, agents, and tooling that turn Claude Code into a force multiplier across the full cybersecurity and GenAI-security lifecycle — from recon and threat modeling to detection engineering, GRC, and CISO-level strategy.
+**A Claude Code plugin marketplace for the full cybersecurity & GenAI-security lifecycle** — from recon and threat modeling to detection engineering, GRC, and CISO-level strategy.
+
+[![Latest release](https://img.shields.io/github/v/release/jassics/awesome-claude-security?label=stable&color=2ea043)](https://github.com/jassics/awesome-claude-security/releases/latest)
+[![Plugins](https://img.shields.io/badge/plugins-43-5ab0f5)](docs/ROADMAP.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin%20marketplace-e8714d)](https://docs.anthropic.com/en/docs/claude-code)
+[![License](https://img.shields.io/github/license/jassics/awesome-claude-security?color=blue)](LICENSE)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
+[![Stars](https://img.shields.io/github/stars/jassics/awesome-claude-security?style=social)](https://github.com/jassics/awesome-claude-security/stargazers)
+
+[Quick install](#quick-install) · [What's inside](#whats-inside) · [Taxonomy](docs/TAXONOMY.md) · [Roadmap](docs/ROADMAP.md) · [Recipes](docs/RECIPES.md) · [Contributing](CONTRIBUTING.md)
+
+</div>
+
+A pentester knows which OWASP test bends a broken-access-control endpoint. An analyst knows which Sigma rule catches Kerberoasting. A red-teamer knows which payload coaxes an LLM past its guardrails, and a CISO knows how to turn that finding into board-ready risk. **Your Claude Code doesn't — until you install the plugins that teach it.**
 
 Everything installs **à la carte** — one repo, but you install only the plugins you want, never "the whole thing." Want only LLM red-teaming? Install `llm-security`. Only threat modeling? Install `threat-modeling`.
 
 Prefer a ready-made stack? Install a **bundle** and it auto-pulls its parts: a **role bundle** like `pentester`, or a **domain suite** like `genai-suite`. Granular and bundled both come from the same catalog — see [docs/BUNDLES.md](docs/BUNDLES.md).
 
-> Status: **early / actively building.** The marketplace, taxonomy, templates, and a first wave of plugins are in place. The [roadmap](docs/ROADMAP.md) tracks what's shipped vs. planned. Contributions welcome — see [CONTRIBUTING](CONTRIBUTING.md).
+> **Stable: [`v1.0.0`](https://github.com/jassics/awesome-claude-security/releases/latest).** The marketplace, taxonomy, templates, and a full first wave of 43 plugins are shipped and installable — see the [roadmap](docs/ROADMAP.md) for what's next. This is a **community** project; it is not affiliated with or endorsed by Anthropic. Contributions welcome — see [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Quick install
 
