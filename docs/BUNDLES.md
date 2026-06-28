@@ -24,7 +24,7 @@ cascades; `claude plugin prune` removes auto-installed deps you no longer need.
 
 Bare strings track whatever version the marketplace provides. To pin, use
 `{ "name": "security-reporting", "version": "~0.1.0" }` and tag releases with
-`claude plugin tag --push` (see [AUTHORING.md](AUTHORING.md#authoring-a-bundle)).
+`claude plugin tag --push` (see [AUTHORING.md](AUTHORING.md#authoring-a-bundle-role-or-domain-suite)).
 
 > **Golden rule:** only list dependencies that **exist in the catalog**. A
 > dependency on a not-yet-built plugin makes the bundle fail to install. Add

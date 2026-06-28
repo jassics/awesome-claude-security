@@ -7,13 +7,14 @@
 **A Claude Code plugin marketplace for the full cybersecurity & GenAI-security lifecycle** — from recon and threat modeling to detection engineering, GRC, and CISO-level strategy.
 
 [![Latest release](https://img.shields.io/github/v/release/jassics/awesome-claude-security?label=stable&color=2ea043)](https://github.com/jassics/awesome-claude-security/releases/latest)
+[![Docs site](https://img.shields.io/badge/docs-online-e8714d)](https://jassics.github.io/awesome-claude-security/)
 [![Plugins](https://img.shields.io/badge/plugins-43-5ab0f5)](docs/ROADMAP.md)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin%20marketplace-e8714d)](https://docs.anthropic.com/en/docs/claude-code)
 [![License](https://img.shields.io/github/license/jassics/awesome-claude-security?color=blue)](LICENSE)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 [![Stars](https://img.shields.io/github/stars/jassics/awesome-claude-security?style=social)](https://github.com/jassics/awesome-claude-security/stargazers)
 
-[Quick install](#quick-install) · [Getting started](docs/GETTING_STARTED.md) · [What's inside](#whats-inside) · [Taxonomy](docs/TAXONOMY.md) · [Roadmap](docs/ROADMAP.md) · [Recipes](docs/RECIPES.md) · [Contributing](CONTRIBUTING.md)
+[Docs site](https://jassics.github.io/awesome-claude-security/) · [Quick install](#quick-install) · [Getting started](docs/GETTING_STARTED.md) · [What's inside](#whats-inside) · [Taxonomy](docs/TAXONOMY.md) · [Roadmap](docs/ROADMAP.md) · [Recipes](docs/RECIPES.md) · [Contributing](CONTRIBUTING.md)
 
 </div>
 

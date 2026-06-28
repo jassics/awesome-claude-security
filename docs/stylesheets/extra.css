@@ -1,0 +1,36 @@
+/* Brand palette — Claude Code terracotta, applied precisely over Material's
+   "deep orange" approximation. */
+:root {
+  --md-primary-fg-color:        #e8714d;
+  --md-primary-fg-color--light: #f0a085;
+  --md-primary-fg-color--dark:  #c8512e;
+  --md-accent-fg-color:         #d65a36;
+}
+
+/* Keep the top bar legible against the terracotta. */
+.md-header,
+.md-tabs {
+  background-color: #16202c;
+}
+
+/* Landing hero */
+.acs-hero {
+  text-align: center;
+  padding: 1.2rem 0 0.4rem;
+}
+.acs-hero img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.acs-tagline {
+  font-size: 1.15rem;
+  color: var(--md-default-fg-color--light);
+  max-width: 42rem;
+  margin: 1rem auto 1.6rem;
+}
+
+/* Tighten the Material grid cards a touch on the landing page. */
+.md-typeset .grid.cards > :is(ul, ol) > li,
+.md-typeset .grid > .card {
+  border-radius: 10px;
+}
