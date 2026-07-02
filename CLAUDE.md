@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture
 
-- **`.claude-plugin/marketplace.json`** — the catalog. `metadata.pluginRoot` is `./plugins`, so each plugin's `source` is just its directory name. **Only list plugins that actually exist** here, or installs break. The full vision (including unbuilt plugins) lives in `docs/ROADMAP.md`, not the catalog.
+- **`.claude-plugin/marketplace.json`** — the catalog. Each plugin's `source` must be `./plugins/<name>` (a bare directory name fails schema validation with "source type your claude code version does not support" — the local-path source string must start with `./`). **Only list plugins that actually exist** here, or installs break. The full vision (including unbuilt plugins) lives in `docs/ROADMAP.md`, not the catalog.
 - **`plugins/<name>/`** — one installable plugin per directory. Layout: `.claude-plugin/plugin.json` (manifest), `skills/<skill>/SKILL.md`, optional `agents/<agent>.md`, optional `.mcp.json`, and a `README.md`. Every component folder must be at the plugin **root**, never inside `.claude-plugin/`.
 - **`templates/`** — copy-to-start scaffolds for new plugins/skills/agents.
 - **`docs/`** — `TAXONOMY.md` (how plugins are bucketed: core / domain / genai / role), `ROADMAP.md` (shipped vs planned), `INSTALL.md`, `AUTHORING.md`.

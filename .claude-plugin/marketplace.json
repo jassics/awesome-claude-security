@@ -14,7 +14,7 @@
   "plugins": [
     {
       "name": "security-diagramming",
-      "source": "security-diagramming",
+      "source": "./plugins/security-diagramming",
       "description": "Attack trees, threat-model DFDs, architecture diagrams, mindmaps, and infographics for security work (Excalidraw-based).",
       "category": "core",
       "keywords": ["diagram", "excalidraw", "attack-tree", "dfd", "mindmap", "infographic"],
@@ -22,7 +22,7 @@
     },
     {
       "name": "security-reporting",
-      "source": "security-reporting",
+      "source": "./plugins/security-reporting",
       "description": "Generate consistent findings, pentest reports, vulnerability writeups, and executive summaries from your work.",
       "category": "core",
       "keywords": ["reporting", "findings", "pentest-report", "executive-summary", "cvss"],
@@ -30,7 +30,7 @@
     },
     {
       "name": "security-integrations",
-      "source": "security-integrations",
+      "source": "./plugins/security-integrations",
       "description": "Publish security work where teams live: findings to Jira, reports/runbooks to Confluence, and reports/diagrams to Google Drive (Atlassian MCP wired).",
       "category": "core",
       "keywords": ["integrations", "jira", "confluence", "google-drive", "mcp", "publishing"],
@@ -38,7 +38,7 @@
     },
     {
       "name": "security-knowledge",
-      "source": "security-knowledge",
+      "source": "./plugins/security-knowledge",
       "description": "Shared reference packs for consistent mapping: MITRE ATT&CK lookup, OWASP Top 10 families (Web/API/LLM/Mobile), and cross-framework crosswalks (CWE, NIST, CIS, ISO 27001).",
       "category": "core",
       "keywords": ["reference", "mitre-attack", "owasp", "cwe", "nist", "iso-27001", "mapping"],
@@ -46,7 +46,7 @@
     },
     {
       "name": "threat-modeling",
-      "source": "threat-modeling",
+      "source": "./plugins/threat-modeling",
       "description": "STRIDE / PASTA threat modeling, data flow diagrams, attack trees, and risk-ranked mitigations.",
       "category": "domain",
       "keywords": ["threat-modeling", "stride", "pasta", "dfd", "risk"],
@@ -54,7 +54,7 @@
     },
     {
       "name": "web-app-security",
-      "source": "web-app-security",
+      "source": "./plugins/web-app-security",
       "description": "Web application security testing: OWASP Web Top 10 assessment, access-control/IDOR testing, and injection testing.",
       "category": "domain",
       "keywords": ["web", "appsec", "owasp", "xss", "sqli", "access-control"],
@@ -62,7 +62,7 @@
     },
     {
       "name": "api-security",
-      "source": "api-security",
+      "source": "./plugins/api-security",
       "description": "API security testing: OWASP API Security Top 10 assessment and object/function-level authorization (BOLA/BFLA) testing.",
       "category": "domain",
       "keywords": ["api", "appsec", "owasp-api", "bola", "bfla", "graphql"],
@@ -70,7 +70,7 @@
     },
     {
       "name": "mobile-security",
-      "source": "mobile-security",
+      "source": "./plugins/mobile-security",
       "description": "Mobile app security (Android/iOS): OWASP MASVS review and MASTG-based testing methodology.",
       "category": "domain",
       "keywords": ["mobile", "android", "ios", "masvs", "mastg", "appsec"],
@@ -78,7 +78,7 @@
     },
     {
       "name": "sast-sca",
-      "source": "sast-sca",
+      "source": "./plugins/sast-sca",
       "description": "Static analysis (SAST) and software composition analysis (SCA): run/triage code scans, dependency/SBOM analysis, and prioritize findings.",
       "category": "domain",
       "keywords": ["sast", "sca", "appsec", "sbom", "dependencies", "triage"],
@@ -86,7 +86,7 @@
     },
     {
       "name": "cloud-security",
-      "source": "cloud-security",
+      "source": "./plugins/cloud-security",
       "description": "Cloud security (AWS/Azure/GCP): posture review, IAM least-privilege review, and misconfiguration scanning.",
       "category": "domain",
       "keywords": ["cloud", "aws", "azure", "gcp", "cspm", "iam", "cis"],
@@ -94,7 +94,7 @@
     },
     {
       "name": "k8s-security",
-      "source": "k8s-security",
+      "source": "./plugins/k8s-security",
       "description": "Kubernetes security: cluster review (CIS / 4Cs), RBAC least-privilege audit, and workload/pod hardening (Pod Security Standards).",
       "category": "domain",
       "keywords": ["kubernetes", "k8s", "rbac", "pod-security", "cis", "container"],
@@ -102,7 +102,7 @@
     },
     {
       "name": "infrastructure-security",
-      "source": "infrastructure-security",
+      "source": "./plugins/infrastructure-security",
       "description": "Infrastructure security: Infrastructure-as-Code (IaC) security review, host/OS hardening against CIS benchmarks, and secrets-management review.",
       "category": "domain",
       "keywords": ["infrastructure", "iac", "terraform", "cis", "hardening", "secrets"],
@@ -110,7 +110,7 @@
     },
     {
       "name": "detection-engineering",
-      "source": "detection-engineering",
+      "source": "./plugins/detection-engineering",
       "description": "Detection engineering: detection-as-code rule development (Sigma/YARA/KQL/SPL), ATT&CK coverage gap analysis, and hypothesis-driven threat hunting.",
       "category": "domain",
       "keywords": ["detection", "sigma", "yara", "mitre-attack", "threat-hunting", "siem"],
@@ -118,7 +118,7 @@
     },
     {
       "name": "dfir",
-      "source": "dfir",
+      "source": "./plugins/dfir",
       "description": "Digital forensics & incident response: drive the IR lifecycle (NIST 800-61 / PICERL), forensic evidence triage and timelining, and IOC development.",
       "category": "domain",
       "keywords": ["dfir", "incident-response", "forensics", "nist-800-61", "ioc"],
@@ -126,7 +126,7 @@
     },
     {
       "name": "threat-intelligence",
-      "source": "threat-intelligence",
+      "source": "./plugins/threat-intelligence",
       "description": "Cyber threat intelligence: run the CTI lifecycle with structured analysis, enrich and pivot on IOCs, and profile threat actors/campaigns (ATT&CK, Diamond Model).",
       "category": "domain",
       "keywords": ["cti", "threat-intel", "mitre-attack", "diamond-model", "actor-profiling"],
@@ -134,7 +134,7 @@
     },
     {
       "name": "network-security",
-      "source": "network-security",
+      "source": "./plugins/network-security",
       "description": "Network security: authorized network penetration testing, segmentation/firewall review, and protocol/service security assessment.",
       "category": "domain",
       "keywords": ["network", "pentest", "segmentation", "firewall", "protocol", "lateral-movement"],
@@ -142,7 +142,7 @@
     },
     {
       "name": "osint",
-      "source": "osint",
+      "source": "./plugins/osint",
       "description": "Open-source intelligence: external footprinting & attack-surface mapping, exposure discovery (leaks/exposed assets), and people/social recon.",
       "category": "domain",
       "keywords": ["osint", "recon", "footprinting", "attack-surface", "exposure"],
@@ -150,7 +150,7 @@
     },
     {
       "name": "vulnerability-management",
-      "source": "vulnerability-management",
+      "source": "./plugins/vulnerability-management",
       "description": "Risk-based vulnerability management: triage and dedupe scanner output, prioritize with CVSS/EPSS/CISA KEV + asset context, and track remediation against SLAs.",
       "category": "domain",
       "keywords": ["vulnerability-management", "cvss", "epss", "kev", "prioritization", "remediation"],
@@ -158,7 +158,7 @@
     },
     {
       "name": "supply-chain-security",
-      "source": "supply-chain-security",
+      "source": "./plugins/supply-chain-security",
       "description": "Software supply-chain security: dependency trust review (typosquatting/dependency-confusion/maintainer risk), artifact provenance & signing (SLSA/Sigstore), and CI/CD pipeline integrity.",
       "category": "domain",
       "keywords": ["supply-chain", "slsa", "sigstore", "provenance", "dependency-confusion", "ci-cd"],
@@ -166,7 +166,7 @@
     },
     {
       "name": "claude-config-security",
-      "source": "claude-config-security",
+      "source": "./plugins/claude-config-security",
       "description": "Static security review of a Claude Code / AI-agent configuration (settings, permissions, hooks, MCP servers, agents, skills, CLAUDE.md) via the agentscanner CLI: scan, triage, harden.",
       "category": "domain",
       "keywords": ["claude-code", "agentscanner", "config-security", "hooks", "mcp", "permissions", "skills", "supply-chain", "static-analysis"],
@@ -174,7 +174,7 @@
     },
     {
       "name": "llm-security",
-      "source": "llm-security",
+      "source": "./plugins/llm-security",
       "description": "OWASP LLM Top 10 assessment, prompt-injection testing, and threat modeling for LLM, RAG, and agentic AI systems.",
       "category": "genai",
       "keywords": ["llm", "genai", "owasp-llm", "prompt-injection", "rag", "ai-agent"],
@@ -182,7 +182,7 @@
     },
     {
       "name": "rag-security",
-      "source": "rag-security",
+      "source": "./plugins/rag-security",
       "description": "Security for Retrieval-Augmented Generation: pipeline review, retrieval/data poisoning testing, and vector-store isolation checks.",
       "category": "genai",
       "keywords": ["rag", "genai", "retrieval", "vector-store", "poisoning"],
@@ -190,7 +190,7 @@
     },
     {
       "name": "agentic-ai-security",
-      "source": "agentic-ai-security",
+      "source": "./plugins/agentic-ai-security",
       "description": "Security for autonomous, tool-using AI agents: review, tool-permission audit, and autonomy-boundary testing for excessive agency.",
       "category": "genai",
       "keywords": ["agentic", "ai-agent", "genai", "excessive-agency", "tool-use"],
@@ -198,7 +198,7 @@
     },
     {
       "name": "multimodal-security",
-      "source": "multimodal-security",
+      "source": "./plugins/multimodal-security",
       "description": "Security for multimodal AI: cross-modal injection testing (image/audio/document) and input-handling review across modalities.",
       "category": "genai",
       "keywords": ["multimodal", "genai", "image-injection", "ocr", "adversarial"],
@@ -206,7 +206,7 @@
     },
     {
       "name": "mlops-security",
-      "source": "mlops-security",
+      "source": "./plugins/mlops-security",
       "description": "Security for the ML lifecycle and infrastructure: ML supply chain (model/dataset provenance, unsafe deserialization), training/MLOps pipeline security, and model-serving hardening.",
       "category": "genai",
       "keywords": ["mlops", "ml-security", "model-supply-chain", "model-serving", "data-poisoning", "genai"],
@@ -214,7 +214,7 @@
     },
     {
       "name": "ai-safety",
-      "source": "ai-safety",
+      "source": "./plugins/ai-safety",
       "description": "AI safety (distinct from security): harm modeling, safety evaluations, responsible red-teaming, bias/fairness, guardrail review, and responsible-AI governance.",
       "category": "ai-safety",
       "keywords": ["ai-safety", "responsible-ai", "harm", "bias", "fairness", "guardrails", "nist-ai-rmf", "eu-ai-act"],
@@ -222,7 +222,7 @@
     },
     {
       "name": "ai-safety-engineer",
-      "source": "ai-safety-engineer",
+      "source": "./plugins/ai-safety-engineer",
       "description": "AI safety engineer role bundle: build and operationalize safeguards (evals-in-CI, guardrails, monitoring, safety cases, governance). Auto-installs the ai-safety stack.",
       "category": "role",
       "keywords": ["ai-safety", "responsible-ai", "role", "bundle", "safety-case"],
@@ -230,7 +230,7 @@
     },
     {
       "name": "responsible-ai-officer",
-      "source": "responsible-ai-officer",
+      "source": "./plugins/responsible-ai-officer",
       "description": "Responsible-AI governance role: AI use-case intake & risk-tiering, oversight, documentation, and compliance (NIST AI RMF / EU AI Act / ISO 42001). Auto-installs the ai-safety stack.",
       "category": "role",
       "keywords": ["responsible-ai", "ai-governance", "grc", "role", "eu-ai-act", "nist-ai-rmf"],
@@ -238,7 +238,7 @@
     },
     {
       "name": "pentester",
-      "source": "pentester",
+      "source": "./plugins/pentester",
       "description": "Pentester role bundle: recon workflow, methodology-driven testing, and engagement reporting. Auto-installs its core/domain stack (osint, web, network, threat-modeling).",
       "category": "role",
       "keywords": ["pentest", "offensive", "recon", "role", "bundle"],
@@ -246,7 +246,7 @@
     },
     {
       "name": "red-team",
-      "source": "red-team",
+      "source": "./plugins/red-team",
       "description": "Red-team role bundle: objectives-based adversary emulation aligned to real threat-actor TTPs (ATT&CK), from recon to impact. Auto-installs its offensive + intel stack.",
       "category": "role",
       "keywords": ["red-team", "adversary-emulation", "offensive", "role", "bundle", "mitre-attack"],
@@ -254,7 +254,7 @@
     },
     {
       "name": "blue-team",
-      "source": "blue-team",
+      "source": "./plugins/blue-team",
       "description": "Blue-team role bundle: threat-informed defense across detection, response, hunting, and intel, plus purple-team validation. Auto-installs the defensive stack.",
       "category": "role",
       "keywords": ["blue-team", "defense", "role", "bundle", "purple-team"],
@@ -262,7 +262,7 @@
     },
     {
       "name": "soc-siem",
-      "source": "soc-siem",
+      "source": "./plugins/soc-siem",
       "description": "SOC / SIEM operations role bundle: alert triage, monitoring, enrichment, and tiered escalation. Auto-installs the defensive stack.",
       "category": "role",
       "keywords": ["soc", "siem", "role", "bundle", "alert-triage", "monitoring"],
@@ -270,7 +270,7 @@
     },
     {
       "name": "security-architect",
-      "source": "security-architect",
+      "source": "./plugins/security-architect",
       "description": "Security architect role bundle: secure-by-design architecture and design review, threat modeling, control selection, and trust-boundary analysis. Auto-installs its core stack.",
       "category": "role",
       "keywords": ["security-architect", "secure-by-design", "design-review", "role", "bundle"],
@@ -278,23 +278,23 @@
     },
     {
       "name": "security-analyst",
-      "source": "security-analyst",
-      "description": "Security analyst role bundle: investigation and analysis (T2/T3) — correlate telemetry, enrich with intel, reconstruct timelines, and reach evidence-backed verdicts. Auto-installs the defensive stack.",
+      "source": "./plugins/security-analyst",
+      "description": "Security analyst role bundle: investigation and analysis (T2/T3) \u2014 correlate telemetry, enrich with intel, reconstruct timelines, and reach evidence-backed verdicts. Auto-installs the defensive stack.",
       "category": "role",
       "keywords": ["security-analyst", "investigation", "analysis", "role", "bundle"],
       "license": "GPL-3.0"
     },
     {
       "name": "security-engineer",
-      "source": "security-engineer",
-      "description": "Security engineer role bundle: build and harden — DevSecOps, secure CI/CD pipelines, control implementation, and remediation across code, cloud, and infrastructure. Auto-installs its stack.",
+      "source": "./plugins/security-engineer",
+      "description": "Security engineer role bundle: build and harden \u2014 DevSecOps, secure CI/CD pipelines, control implementation, and remediation across code, cloud, and infrastructure. Auto-installs its stack.",
       "category": "role",
       "keywords": ["security-engineer", "devsecops", "hardening", "ci-cd", "role", "bundle"],
       "license": "GPL-3.0"
     },
     {
       "name": "grc",
-      "source": "grc",
+      "source": "./plugins/grc",
       "description": "Governance, risk & compliance: framework gap-assessments (SOC 2 / ISO 27001 / PCI / HIPAA / GDPR / NIST), security risk assessment & register, and policy management. Auto-installs reporting + diagramming.",
       "category": "role",
       "keywords": ["grc", "compliance", "risk", "governance", "iso-27001", "soc2", "audit"],
@@ -302,7 +302,7 @@
     },
     {
       "name": "ciso-toolkit",
-      "source": "ciso-toolkit",
+      "source": "./plugins/ciso-toolkit",
       "description": "CISO executive toolkit: security strategy & roadmap, cyber-risk quantification, and board/executive decks. Auto-installs reporting, diagramming, and threat-modeling.",
       "category": "executive",
       "keywords": ["ciso", "executive", "strategy", "risk-quantification", "board", "governance"],
@@ -310,7 +310,7 @@
     },
     {
       "name": "cto-security",
-      "source": "cto-security",
+      "source": "./plugins/cto-security",
       "description": "CTO security advisor: secure-by-design at scale (paved roads, guardrails, enablement) and technology-risk assessment for strategic decisions. Auto-installs threat-modeling, diagramming, reporting.",
       "category": "executive",
       "keywords": ["cto", "executive", "secure-by-design", "tech-strategy", "paved-road"],
@@ -318,7 +318,7 @@
     },
     {
       "name": "genai-suite",
-      "source": "genai-suite",
+      "source": "./plugins/genai-suite",
       "description": "Domain suite: one-shot install of the GenAI / AI-security plugins (LLM, RAG, agentic, multimodal, MLOps).",
       "category": "suite",
       "keywords": ["suite", "bundle", "genai", "ai-security", "llm"],
@@ -326,7 +326,7 @@
     },
     {
       "name": "cloud-suite",
-      "source": "cloud-suite",
+      "source": "./plugins/cloud-suite",
       "description": "Domain suite: one-shot install of cloud-security, k8s-security, and infrastructure-security.",
       "category": "suite",
       "keywords": ["suite", "bundle", "cloud", "kubernetes", "iac", "infrastructure"],
@@ -334,7 +334,7 @@
     },
     {
       "name": "appsec-suite",
-      "source": "appsec-suite",
+      "source": "./plugins/appsec-suite",
       "description": "Domain suite: one-shot install of the appsec plugins (web, API, mobile, SAST/SCA).",
       "category": "suite",
       "keywords": ["suite", "bundle", "appsec", "web", "api", "mobile", "sast"],
@@ -342,7 +342,7 @@
     },
     {
       "name": "ai-safety-suite",
-      "source": "ai-safety-suite",
+      "source": "./plugins/ai-safety-suite",
       "description": "Trustworthy-AI suite: pairs AI safety with the full GenAI security stack (ai-safety + genai-suite).",
       "category": "suite",
       "keywords": ["suite", "bundle", "trustworthy-ai", "ai-safety", "ai-security"],
@@ -350,7 +350,7 @@
     },
     {
       "name": "blueops-suite",
-      "source": "blueops-suite",
+      "source": "./plugins/blueops-suite",
       "description": "Defensive operations suite: one-shot install of detection-engineering, dfir, and threat-intelligence.",
       "category": "suite",
       "keywords": ["suite", "bundle", "blue-team", "soc", "detection", "dfir", "threat-intel"],

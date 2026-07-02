@@ -115,12 +115,13 @@ def main() -> int:
         for field in ("source", "description", "category"):
             if not e.get(field):
                 err(f"marketplace entry '{name}' missing `{field}`")
-        if source and source != name:
-            err(f"marketplace entry '{name}': source '{source}' should equal name")
+        expected_source = f"./plugins/{name}"
+        if source and source != expected_source:
+            err(f"marketplace entry '{name}': source '{source}' should be '{expected_source}'")
         if not KEBAB.match(name):
             err(f"marketplace entry '{name}' is not kebab-case")
-        if not (PLUGINS_DIR / (source or name)).is_dir():
-            err(f"marketplace entry '{name}' points to missing directory plugins/{source or name}")
+        if not (ROOT / (source or expected_source)).is_dir():
+            err(f"marketplace entry '{name}' points to missing directory {source or expected_source}")
 
     # Reverse parity + per-plugin checks.
     dirs = sorted(p for p in PLUGINS_DIR.iterdir() if p.is_dir())
