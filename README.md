@@ -53,19 +53,61 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 
 ### Shipped today (43 plugins)
 
-**Core** — [`security-diagramming`](plugins/security-diagramming/) (attack trees, DFDs, architecture diagrams, mindmaps, infographics) · [`security-reporting`](plugins/security-reporting/) (findings, pentest reports, exec summaries, CVSS) · [`security-integrations`](plugins/security-integrations/) (publish to Jira/Confluence/Drive) · [`security-knowledge`](plugins/security-knowledge/) (ATT&CK / OWASP / framework reference packs).
+**Core**
+1. [`security-diagramming`](plugins/security-diagramming/) (attack trees, DFDs, architecture diagrams, mindmaps, infographics)
+2. [`security-reporting`](plugins/security-reporting/) (findings, pentest reports, exec summaries, CVSS)
+3. [`security-integrations`](plugins/security-integrations/) (publish to Jira/Confluence/Drive)
+4. [`security-knowledge`](plugins/security-knowledge/) (ATT&CK / OWASP / framework reference packs).
 
-**Domain** — [`threat-modeling`](plugins/threat-modeling/) (STRIDE/PASTA) · [`web-app-security`](plugins/web-app-security/) (OWASP Web Top 10, access control, injection) · [`api-security`](plugins/api-security/) (OWASP API Top 10, BOLA/BFLA) · [`mobile-security`](plugins/mobile-security/) (MASVS/MASTG) · [`sast-sca`](plugins/sast-sca/) (static analysis + dependency/SBOM) · [`network-security`](plugins/network-security/) (network pentest, segmentation, protocols) · [`osint`](plugins/osint/) (footprinting, exposure discovery, recon) · [`cloud-security`](plugins/cloud-security/) (AWS/Azure/GCP posture, IAM, misconfig) · [`k8s-security`](plugins/k8s-security/) (CIS/4Cs, RBAC, pod hardening) · [`infrastructure-security`](plugins/infrastructure-security/) (IaC review, host hardening, secrets) · [`detection-engineering`](plugins/detection-engineering/) (Sigma/YARA, ATT&CK coverage, threat hunting) · [`dfir`](plugins/dfir/) (incident response, forensic triage, IOCs) · [`threat-intelligence`](plugins/threat-intelligence/) (CTI lifecycle, IOC enrichment, actor profiling) · [`vulnerability-management`](plugins/vulnerability-management/) (triage, CVSS/EPSS/KEV prioritization, remediation SLAs) · [`supply-chain-security`](plugins/supply-chain-security/) (dependency trust, SLSA/Sigstore provenance, CI/CD integrity) · [`claude-config-security`](plugins/claude-config-security/) (audit the Claude Code config itself — hooks/MCP/permissions/skills — via the [`agentscanner`](https://pypi.org/project/agentscanner/) CLI).
+**Domain** 
+1. [`threat-modeling`](plugins/threat-modeling/) (STRIDE/PASTA)
+2. [`web-app-security`](plugins/web-app-security/) (OWASP Web Top 10, access control, injection)
+3. [`api-security`](plugins/api-security/) (OWASP API Top 10, BOLA/BFLA)
+4. [`mobile-security`](plugins/mobile-security/) (MASVS/MASTG)
+5. [`sast-sca`](plugins/sast-sca/) (static analysis + dependency/SBOM)
+6. [`network-security`](plugins/network-security/) (network pentest, segmentation, protocols)
+7. [`osint`](plugins/osint/) (footprinting, exposure discovery, recon)
+8. [`cloud-security`](plugins/cloud-security/) (AWS/Azure/GCP posture, IAM, misconfig)
+9. [`k8s-security`](plugins/k8s-security/) (CIS/4Cs, RBAC, pod hardening)
+10. [`infrastructure-security`](plugins/infrastructure-security/) (IaC review, host hardening, secrets)
+11. [`detection-engineering`](plugins/detection-engineering/) (Sigma/YARA, ATT&CK coverage, threat hunting)
+12. [`dfir`](plugins/dfir/) (incident response, forensic triage, IOCs)
+13. [`threat-intelligence`](plugins/threat-intelligence/) (CTI lifecycle, IOC enrichment, actor profiling)
+14. [`vulnerability-management`](plugins/vulnerability-management/) (triage, CVSS/EPSS/KEV prioritization, remediation SLAs)
+15. [`supply-chain-security`](plugins/supply-chain-security/) (dependency trust, SLSA/Sigstore provenance, CI/CD integrity)
+16. [`claude-config-security`](plugins/claude-config-security/) (audit the Claude Code config itself — hooks/MCP/permissions/skills — via the [`agentscanner`](https://pypi.org/project/agentscanner/) CLI).
 
-**GenAI security** — [`llm-security`](plugins/llm-security/) (OWASP LLM Top 10, prompt injection) · [`rag-security`](plugins/rag-security/) (retrieval poisoning, isolation) · [`agentic-ai-security`](plugins/agentic-ai-security/) (tool-permission audit, autonomy boundaries) · [`multimodal-security`](plugins/multimodal-security/) (cross-modal injection) · [`mlops-security`](plugins/mlops-security/) (ML supply chain, pipeline security, model serving).
+**GenAI security**
+1. [`llm-security`](plugins/llm-security/) (OWASP LLM Top 10, prompt injection)
+2. [`rag-security`](plugins/rag-security/) (retrieval poisoning, isolation)
+3. [`agentic-ai-security`](plugins/agentic-ai-security/) (tool-permission audit, autonomy boundaries)
+4. [`multimodal-security`](plugins/multimodal-security/) (cross-modal injection)
+5. [`mlops-security`](plugins/mlops-security/) (ML supply chain, pipeline security, model serving).
 
-**AI safety** *(≠ security — [see why](docs/TAXONOMY.md#ai-security-vs-ai-safety))* — [`ai-safety`](plugins/ai-safety/) (harm modeling, safety evals, responsible red-team, bias/fairness, guardrails, RAI governance).
+**AI safety** *(≠ security — [see why](docs/TAXONOMY.md#ai-security-vs-ai-safety))*
+1. [`ai-safety`](plugins/ai-safety/) (harm modeling, safety evals, responsible red-team, bias/fairness, guardrails, RAI governance).
 
-**Roles** *(auto-install their stack)* — [`pentester`](plugins/pentester/) · [`red-team`](plugins/red-team/) (adversary emulation, ATT&CK) · [`blue-team`](plugins/blue-team/) (threat-informed defense + purple teaming) · [`soc-siem`](plugins/soc-siem/) (alert triage, monitoring) · [`security-analyst`](plugins/security-analyst/) (investigation & analysis, T2/T3) · [`security-architect`](plugins/security-architect/) (secure-by-design, design review) · [`security-engineer`](plugins/security-engineer/) (DevSecOps, harden, secure pipelines) · [`ai-safety-engineer`](plugins/ai-safety-engineer/) · [`responsible-ai-officer`](plugins/responsible-ai-officer/) (AI governance, EU AI Act risk-tiering).
+**Roles** *(auto-install their stack)*
+1. [`pentester`](plugins/pentester/)
+2. [`red-team`](plugins/red-team/) (adversary emulation, ATT&CK)
+3. [`blue-team`](plugins/blue-team/) (threat-informed defense + purple teaming)
+4. [`soc-siem`](plugins/soc-siem/) (alert triage, monitoring)
+5. [`security-analyst`](plugins/security-analyst/) (investigation & analysis, T2/T3)
+6. [`security-architect`](plugins/security-architect/) (secure-by-design, design review)
+7. [`security-engineer`](plugins/security-engineer/) (DevSecOps, harden, secure pipelines)
+8. [`ai-safety-engineer`](plugins/ai-safety-engineer/)
+9. [`responsible-ai-officer`](plugins/responsible-ai-officer/) (AI governance, EU AI Act risk-tiering).
 
-**Executive** *(strategic tier)* — [`ciso-toolkit`](plugins/ciso-toolkit/) (security strategy, cyber-risk quantification, board decks) · [`cto-security`](plugins/cto-security/) (secure-by-design at scale, tech-risk assessment).
+**Executive** *(strategic tier)*
+1. [`ciso-toolkit`](plugins/ciso-toolkit/) (security strategy, cyber-risk quantification, board decks)
+2. [`cto-security`](plugins/cto-security/) (secure-by-design at scale, tech-risk assessment).
 
-**Suites** *(one-shot bundles)* — [`genai-suite`](plugins/genai-suite/) (all GenAI security) · [`appsec-suite`](plugins/appsec-suite/) (web+api+mobile+SAST/SCA) · [`cloud-suite`](plugins/cloud-suite/) (cloud+k8s+infrastructure) · [`blueops-suite`](plugins/blueops-suite/) (detection+dfir+threat-intel) · [`ai-safety-suite`](plugins/ai-safety-suite/) (safety + GenAI security together).
+**Suites** *(one-shot bundles)*
+1. [`genai-suite`](plugins/genai-suite/) (all GenAI security)
+2. [`appsec-suite`](plugins/appsec-suite/) (web+api+mobile+SAST/SCA)
+3. [`cloud-suite`](plugins/cloud-suite/) (cloud+k8s+infrastructure)
+4. [`blueops-suite`](plugins/blueops-suite/) (detection+dfir+threat-intel)
+5. [`ai-safety-suite`](plugins/ai-safety-suite/) (safety + GenAI security together).
 
 The [roadmap](docs/ROADMAP.md) is fully shipped — see it for how the buckets fit together and where the project goes next.
 
