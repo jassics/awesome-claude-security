@@ -97,6 +97,7 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 7. [`security-engineer`](plugins/security-engineer/) (DevSecOps, harden, secure pipelines)
 8. [`ai-safety-engineer`](plugins/ai-safety-engineer/)
 9. [`responsible-ai-officer`](plugins/responsible-ai-officer/) (AI governance, EU AI Act risk-tiering).
+10. [`grc`][plugins/grc]
 
 **Executive** *(strategic tier)*
 1. [`ciso-toolkit`](plugins/ciso-toolkit/) (security strategy, cyber-risk quantification, board decks)
