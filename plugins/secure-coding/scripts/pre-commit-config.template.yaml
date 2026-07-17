@@ -1,0 +1,37 @@
+# Installed by install-git-hooks.sh into the target repo as .pre-commit-config.yaml.
+# Runs regardless of Claude Code — enforces on any `git commit`/`git push` from any
+# terminal, IDE, or CI runner once `pre-commit install` has been run.
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.21.2
+    hooks:
+      - id: gitleaks
+
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: ["--baseline", ".secrets.baseline"]
+
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.8.0
+    hooks:
+      - id: bandit
+        args: ["-c", "pyproject.toml"]
+        additional_dependencies: ["bandit[toml]"]
+        files: \.py$
+
+  - repo: local
+    hooks:
+      - id: semgrep-secure-coding
+        name: semgrep (secure-coding rule pack)
+        entry: semgrep --config __RULES_DIR__/semgrep-python.yml --config __RULES_DIR__/semgrep-react.yml --error
+        language: system
+        pass_filenames: false
+
+      - id: gitignore-required-check
+        name: gitignore required patterns present
+        entry: __SCRIPTS_DIR__/check-gitignore.py
+        language: system
+        pass_filenames: false
+        stages: [pre-commit, pre-push]

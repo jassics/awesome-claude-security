@@ -85,6 +85,14 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "secure-coding",
+      "source": "./plugins/secure-coding",
+      "description": "Secure-coding enforcement for Python and React/JS: flags outdated/vulnerable functions with a safe alternative (curated CWE/OWASP-ASVS rule pack + Semgrep), and blocks commits/pushes carrying secrets, cloud keys, or sensitive config via both a Claude Code hook and installable real git hooks.",
+      "category": "domain",
+      "keywords": ["secure-coding", "python", "react", "javascript", "secrets", "git-hooks", "semgrep", "gitignore", "sast"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "cloud-security",
       "source": "./plugins/cloud-security",
       "description": "Cloud security (AWS/Azure/GCP): posture review, IAM least-privilege review, and misconfiguration scanning.",

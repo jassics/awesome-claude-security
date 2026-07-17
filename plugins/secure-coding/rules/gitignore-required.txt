@@ -1,0 +1,25 @@
+# Patterns that must appear in .gitignore. One pattern per line.
+# Comments (#) and blank lines are ignored. Same list doubles as the
+# "sensitive file, must never be tracked regardless of content" check
+# used by secret-guard and the pretooluse-guard hook.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+id_ecdsa
+id_ed25519
+credentials.json
+service-account*.json
+secrets.yml
+secrets.yaml
+.aws/credentials
+.npmrc
+.netrc
+*.keystore
+*.jks
+kubeconfig
+*.kubeconfig
