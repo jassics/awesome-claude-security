@@ -6,10 +6,15 @@ on:
   pull_request:
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   structure:
     name: Structural invariants
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - name: Validate marketplace structure
@@ -18,6 +23,7 @@ jobs:
   manifests:
     name: Plugin manifest schema (claude plugin validate)
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     # Best-effort: the structural job above is the authoritative gate. This adds
     # the official schema check when the CLI is installable in CI.
     continue-on-error: true
