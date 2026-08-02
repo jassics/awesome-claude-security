@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "security-reporting",
   "description": "Generate consistent findings, pentest reports, vulnerability writeups, and executive summaries with CVSS scoring.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": { "name": "Jassics", "email": "jassics@gmail.com" },
   "license": "GPL-3.0",
   "keywords": ["reporting", "findings", "pentest-report", "executive-summary", "cvss", "remediation"]

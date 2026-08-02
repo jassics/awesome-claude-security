@@ -16,7 +16,7 @@ can verify.
 
 ```
 ## <ID> — <concise title>
-- Severity: <Critical/High/Medium/Low/Info>  (CVSS 3.1: <score> <vector>)
+- Severity: <Critical/High/Medium/Low/Info>  (CVSS 4.0: <score> <vector>)
 - Affected: <assets / endpoints / components>
 - Status: Open
 
