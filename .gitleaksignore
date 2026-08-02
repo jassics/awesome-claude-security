@@ -1,0 +1,5 @@
+# False positives from gitleaks --no-git full-tree scans (used by the
+# secure-coding plugin's pre-push guard). One fingerprint per line.
+#
+# "shadow/zombie" API-inventory terminology, not a secret.
+plugins/api-security/skills/owasp-api-top10/SKILL.md:generic-api-key:36
