@@ -62,6 +62,15 @@ def run(cmd, cwd):
         return ""
 
 
+def run_rc(cmd, cwd):
+    """Like run(), but also returns the process exit code (-1 on failure to run)."""
+    try:
+        out = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=15)
+        return out.stdout, out.returncode
+    except Exception:
+        return "", -1
+
+
 def which(binname):
     for d in os.environ.get("PATH", "").split(os.pathsep):
         if os.path.isfile(os.path.join(d, binname)):
@@ -108,11 +117,12 @@ def main():
 
     if which("gitleaks"):
         if is_commit:
-            gl_out = run(["gitleaks", "protect", "--staged", "--verbose", "--no-banner"], toplevel)
+            gl_cmd = ["gitleaks", "protect", "--staged", "--verbose", "--no-banner"]
         else:
-            gl_out = run(["gitleaks", "detect", "--source", toplevel, "--no-git", "-v", "--no-banner"], toplevel)
-        # gitleaks prints "leaks found" text; treat any non-empty finding-shaped output as a hit.
-        if re.search(r"(?i)leak(s)? found|Finding:", gl_out):
+            gl_cmd = ["gitleaks", "detect", "--source", toplevel, "--no-git", "-v", "--no-banner"]
+        _gl_out, gl_rc = run_rc(gl_cmd, toplevel)
+        # gitleaks exit codes: 0 = clean, 1 = leaks found, >1 = tool error (fail open).
+        if gl_rc == 1:
             findings.append("gitleaks reported one or more leaks (run `gitleaks protect --staged -v` for detail)")
     else:
         for name, pattern in SECRET_PATTERNS:
