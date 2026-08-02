@@ -107,6 +107,8 @@ Each role plugin ships a primary agent persona + a handful of role-specific skil
 | `blue-team` | Defense & hardening | `detection-engineering`, `dfir` |
 | `soc-siem` | Monitoring & response | `detection-engineering`, `dfir` |
 | `ai-safety-engineer` | AI safety build & operate | `ai-safety`, `security-reporting`, `security-diagramming` |
+| `responsible-ai-officer` | AI governance & risk-tiering | `ai-safety`, `security-reporting`, `security-diagramming` |
+| `developer` | Secure-by-default coding companion | `security-knowledge`, `sast-sca`, `security-architect`, `infrastructure-security` |
 
 ## Executive (strategic tier)
 

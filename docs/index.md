@@ -47,7 +47,7 @@ installs **à la carte**, or grab a **bundle** (a role like `pentester`, a suite
 
     ---
 
-    All 43 plugins, grouped by bucket and searchable. Generated straight from the
+    All 44 plugins, grouped by bucket and searchable. Generated straight from the
     marketplace, so it's never stale.
 
     [:octicons-arrow-right-24: Plugin catalog](catalog.md)

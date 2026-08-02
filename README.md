@@ -8,7 +8,7 @@
 
 [![Latest release](https://img.shields.io/github/v/release/jassics/awesome-claude-security?label=stable&color=2ea043)](https://github.com/jassics/awesome-claude-security/releases/latest)
 [![Docs site](https://img.shields.io/badge/docs-online-e8714d)](https://jassics.github.io/awesome-claude-security/)
-[![Plugins](https://img.shields.io/badge/plugins-43-5ab0f5)](docs/ROADMAP.md)
+[![Plugins](https://img.shields.io/badge/plugins-44-5ab0f5)](docs/ROADMAP.md)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin%20marketplace-e8714d)](https://docs.anthropic.com/en/docs/claude-code)
 [![License](https://img.shields.io/github/license/jassics/awesome-claude-security?color=blue)](LICENSE)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
@@ -24,7 +24,7 @@ Everything installs **à la carte** — one repo, but you install only the plugi
 
 Prefer a ready-made stack? Install a **bundle** and it auto-pulls its parts: a **role bundle** like `pentester`, or a **domain suite** like `genai-suite`. Granular and bundled both come from the same catalog — see [docs/BUNDLES.md](docs/BUNDLES.md).
 
-> **Stable: [`v1.0.0`](https://github.com/jassics/awesome-claude-security/releases/latest).** The marketplace, taxonomy, templates, and a full first wave of 43 plugins are shipped and installable — see the [roadmap](docs/ROADMAP.md) for what's next. This is a **community** project; it is not affiliated with or endorsed by Anthropic. Contributions welcome — see [CONTRIBUTING](CONTRIBUTING.md).
+> **Stable: [`v1.0.0`](https://github.com/jassics/awesome-claude-security/releases/latest).** The marketplace, taxonomy, templates, and a full first wave of 44 plugins are shipped and installable — see the [roadmap](docs/ROADMAP.md) for what's next. This is a **community** project; it is not affiliated with or endorsed by Anthropic. Contributions welcome — see [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Quick install
 
@@ -51,7 +51,7 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 | **AI safety** | Preventing AI systems from causing harm (a *distinct* discipline — [see why](docs/TAXONOMY.md#ai-security-vs-ai-safety)) | `ai-safety`, `ai-safety-engineer` |
 | **Role** | Persona bundles that combine domains + workflow | `pentester`, `ai-safety-engineer`, security analyst, engineer, architect, GRC, blue team, SOC/SIEM, CISO/CTO |
 
-### Shipped today (43 plugins)
+### Shipped today (44 plugins)
 
 **Core**
 1. [`security-diagramming`](plugins/security-diagramming/) (attack trees, DFDs, architecture diagrams, mindmaps, infographics)
@@ -80,7 +80,7 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 **GenAI security**
 1. [`llm-security`](plugins/llm-security/) (OWASP LLM Top 10, prompt injection)
 2. [`rag-security`](plugins/rag-security/) (retrieval poisoning, isolation)
-3. [`agentic-ai-security`](plugins/agentic-ai-security/) (tool-permission audit, autonomy boundaries)
+3. [`agentic-ai-security`](plugins/agentic-ai-security/) (tool-permission audit, autonomy boundaries, MCP/agent-harness/A2A security)
 4. [`multimodal-security`](plugins/multimodal-security/) (cross-modal injection)
 5. [`mlops-security`](plugins/mlops-security/) (ML supply chain, pipeline security, model serving).
 
@@ -98,6 +98,7 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 8. [`ai-safety-engineer`](plugins/ai-safety-engineer/)
 9. [`responsible-ai-officer`](plugins/responsible-ai-officer/) (AI governance, EU AI Act risk-tiering).
 10. [`grc`][plugins/grc]
+11. [`developer`](plugins/developer/) (secure-by-default coding companion, PRD/prompt security injection, pre-commit gate).
 
 **Executive** *(strategic tier)*
 1. [`ciso-toolkit`](plugins/ciso-toolkit/) (security strategy, cyber-risk quantification, board decks)
