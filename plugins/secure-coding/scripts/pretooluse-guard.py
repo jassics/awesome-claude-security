@@ -119,7 +119,9 @@ def main():
         if is_commit:
             gl_cmd = ["gitleaks", "protect", "--staged", "--verbose", "--no-banner"]
         else:
-            gl_cmd = ["gitleaks", "detect", "--source", toplevel, "--no-git", "-v", "--no-banner"]
+            # Use a relative --source (run from toplevel as cwd) so fingerprints match
+            # a repo-committed .gitleaksignore regardless of the clone's absolute path.
+            gl_cmd = ["gitleaks", "detect", "--source", ".", "--no-git", "-v", "--no-banner"]
         _gl_out, gl_rc = run_rc(gl_cmd, toplevel)
         # gitleaks exit codes: 0 = clean, 1 = leaks found, >1 = tool error (fail open).
         if gl_rc == 1:
