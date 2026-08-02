@@ -23,6 +23,7 @@ artifact, and this build?"*
 | `/supply-chain-security:dependency-supply-chain-review` | Trust-vet dependencies: typosquatting, dependency confusion, maintainer/abandonment, install scripts, pinning. |
 | `/supply-chain-security:artifact-provenance-verification` | Assess/establish provenance & signing (SLSA level, Sigstore, in-toto) and enforced verification. |
 | `/supply-chain-security:pipeline-integrity-review` | Harden CI/CD against tampering: PPE, runner trust, secrets, mutable inputs (OWASP CI/CD, SLSA build track). |
+| `/supply-chain-security:pipeline-timeout-lint` | Narrow, fast check for GitHub Actions jobs with no `timeout-minutes` or workflows with no `concurrency` group — resource/cost exhaustion, not tampering. Requires PyYAML. |
 
 ## Pairs well with
 
