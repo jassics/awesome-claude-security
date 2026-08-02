@@ -17,7 +17,9 @@ so misconfigurations are caught before they reach a live environment.
 1. **Public exposure** — resources open to the internet (security groups/NSGs/
    firewall `0.0.0.0/0`, public buckets/storage, public IPs on sensitive hosts).
 2. **Identity** — over-broad IAM policies, wildcard permissions, default/no roles,
-   long-lived credentials defined in code.
+   long-lived credentials defined in code, session duration raised beyond what the
+   workload needs, and trust policies missing confused-deputy conditions
+   (`aws:SourceArn`/`SourceAccount`/`ExternalId`) on third-party/cross-account roles.
 3. **Encryption** — storage/volumes/databases without encryption at rest; TLS not
    enforced; default/unmanaged keys.
 4. **Logging & monitoring** — audit logging/flow logs not enabled by the IaC.
@@ -25,6 +27,10 @@ so misconfigurations are caught before they reach a live environment.
    (cross-ref `secrets-management-review`).
 6. **Module/provider hygiene** — untrusted/unpinned modules, provider versions,
    drift between code and deployed state.
+7. **Helm chart defaults** — a chart's `values.yaml` default (empty `resources`,
+   `networkPolicy.enabled: false`, `ingress.tls: []`) silently becomes every
+   `helm install`'s config, not just this deployment's — a distribution-scale
+   version of the same "no safe default" risk, one layer up.
 
 # Steps
 

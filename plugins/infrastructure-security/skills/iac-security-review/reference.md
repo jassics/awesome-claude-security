@@ -15,6 +15,23 @@ tfsec/Trivy, KICS, cfn-nag, terrascan. Anchor severities to the resource's expos
 - [ ] Least-privilege roles; no overly broad managed-policy attachments.
 - [ ] No access keys / long-lived credentials declared in code.
 - [ ] Assume-role / trust policies scoped (no `Principal: *`).
+- [ ] Role session duration (`max_session_duration` / `MaxSessionDuration`) is no
+      longer than the workload actually needs. AWS defaults to 1h if unset — that's
+      already safe; the real risk is IaC that explicitly raises it toward the 12h
+      ceiling "for convenience" (a long CI job, a lazy default copied across roles).
+      Once raised, the wider window silently applies to *every* future assumption
+      of that role, including ones that only needed a few minutes — a leaked token
+      now has hours of blast radius instead of one. Flag any explicit value above
+      what the role's actual workload duration requires, and flag any role with no
+      value set that's assumed by a third party or cross-account principal (that
+      combination should set an explicit, tight value, not rely on the default).
+- [ ] Trust policies scope the assuming principal precisely, and — wherever a
+      third-party or cross-account principal is trusted (SaaS integrations, CI/CD
+      OIDC providers, cross-account roles) — include a confused-deputy condition
+      (`aws:SourceArn`, `aws:SourceAccount`, `sts:ExternalId`, or the OIDC
+      equivalent `sub`/`aud` claim scoping). A bare `Principal` with no `Condition`
+      lets *any* caller who knows or guesses the ARN/account ID assume the role,
+      not just the intended one.
 
 ## Data protection
 
@@ -40,6 +57,31 @@ tfsec/Trivy, KICS, cfn-nag, terrascan. Anchor severities to the resource's expos
 - [ ] Provider versions pinned; deprecated resources flagged.
 - [ ] Drift detection in place between code and deployed state.
 
+## Helm chart defaults (distribution-scale blast radius)
+
+A chart's `values.yaml` default isn't just this deployment's config — it's every
+future `helm install`'s config, silently, unless that installer knows to override
+it. Treat a permissive chart default as a finding that multiplies across every
+consumer, not a single misconfiguration:
+
+- [ ] `resources` (CPU/memory requests+limits) isn't empty/absent by default — an
+      unset default here reproduces the same missing-resource-limit gap
+      `k8s-security` flags at the manifest level, but now every chart consumer
+      inherits it without writing a single line of YAML.
+- [ ] `networkPolicy.enabled` (or equivalent) defaults to `true`/default-deny where
+      the chart's own templates support it, not `false`/absent — cross-ref
+      `k8s-security`'s default-deny `NetworkPolicy` check.
+- [ ] `ingress.tls` isn't an empty list (`[]`) by default if the chart ships an
+      Ingress template — TLS-off should be an explicit opt-out, not the shipped
+      default.
+- [ ] Auto-created RBAC (`serviceAccount.create: true` plus a generated
+      Role/RoleBinding) doesn't grant more than the chart's own workload needs by
+      default; check the templated Role, not just the values-file toggle.
+- [ ] If a control is intentionally left off by default for portability (e.g. a
+      chart meant to run on clusters without a CNI that supports NetworkPolicy),
+      that trade-off is documented in `values.yaml` comments or the README with the
+      security implication stated — not silently defaulted with no note anywhere.
+
 ## Per-format notes
 
 - **Terraform**: watch `*.tfvars`, `locals`, and state files for secrets; pin
@@ -47,4 +89,6 @@ tfsec/Trivy, KICS, cfn-nag, terrascan. Anchor severities to the resource's expos
 - **CloudFormation**: parameters with `NoEcho`, no secrets in `Default`.
 - **ARM/Bicep**: `secureString` params; avoid secrets in outputs.
 - **Ansible**: use Vault for secrets; avoid plaintext in playbooks/inventory.
-- **Helm/K8s manifests**: cross-ref `k8s-security` (Pod Security, RBAC, NetworkPolicy).
+- **Helm/K8s manifests**: cross-ref `k8s-security` (Pod Security, RBAC, NetworkPolicy)
+  for a specific manifest/cluster, and the "Helm chart defaults" section above for
+  a chart's `values.yaml` defaults, which apply to every future install.
