@@ -18,8 +18,16 @@ on their own.
 ```
 
 This **auto-installs** its full stack: `security-knowledge`, `sast-sca`,
-`security-architect`, and `infrastructure-security`. (`claude plugin prune`
-cleans them up later if you remove this bundle.)
+`security-architect`, `infrastructure-security`, and `secure-coding`. (`claude
+plugin prune` cleans them up later if you remove this bundle.)
+
+`secure-coding` is the one dependency that's *enforced*, not just advisory — it
+installs a Claude Code hook plus real git hooks that block a commit/push
+containing a secret or a banned Python/React function, from any tool, not only
+inside a Claude Code session. Run its `install-git-hooks.sh` once per repo for
+that guarantee; `pre-commit-gate` below is the fast, diff-scoped check for
+everything `secure-coding` doesn't cover (broader SAST/SCA/IaC, other
+languages).
 
 ## Command
 

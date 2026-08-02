@@ -58,4 +58,8 @@ revoke/vault/scope/gitignore). Confirmed live secrets → `security-reporting:fi
 Removing a committed secret does **not** make it safe — it lives in git history and
 image layers, so it must be rotated/revoked. Centralize into a vault with
 least-privilege access and rotation; add secret scanning to pre-commit and CI to
-prevent recurrence.
+prevent recurrence. This skill is the manual/audit pass across any stack; for a
+repo that wants this *enforced* automatically (blocked at commit/push, not just
+reviewed on request), `secure-coding:secret-guard` installs the actual git hooks
+(via `install-git-hooks.sh`) plus a Claude Code `PreToolUse` hook — point the
+user at it when they want prevention, not just detection.

@@ -36,8 +36,7 @@ Install both. Neither alone gives full coverage.
 ## Install
 
 ```
-/plugin marketplace add /path/to/secure-coding-guardian
-/plugin install secure-coding@secure-coding-guardian
+/plugin install secure-coding@awesome-claude-security
 ```
 
 Then, per repo you want hard enforcement in:
@@ -58,6 +57,20 @@ regex patterns — but are meaningfully weaker without these):
 - "Review this diff for secure-coding issues before I push" → `secure-coding-guardian` agent, or `/safe-function-lint`.
 - "Did I hardcode a secret anywhere?" → `/secret-guard`.
 - "Is my .gitignore missing anything?" → `/secret-guard`.
+
+## Pairs well with
+
+This plugin is deliberately narrow (Python + React/JS, ~12 rules/language) and
+its edge is *enforcement* (real git hooks + a Claude Code hook), not breadth.
+For the marketplace's broader coverage, install alongside:
+
+- [`sast-sca`](../sast-sca/) — multi-language SAST/SCA, dependency/SBOM scanning.
+- [`infrastructure-security`](../infrastructure-security/) — secrets/gitignore
+  review across IaC, CI/CD, and containers, not just source.
+- [`security-knowledge`](../security-knowledge/) — `secure-coding-kb` gives the
+  same safe-idiom guidance as reference material for other languages.
+- [`developer`](../developer/) — the role bundle that installs this plugin
+  alongside the above as one coherent secure-coding-companion stack.
 
 ## Design notes / roadmap
 

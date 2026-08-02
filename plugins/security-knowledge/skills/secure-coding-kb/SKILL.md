@@ -41,4 +41,7 @@ already exists and reports what's wrong; this skill guides what to write in the
 first place — most valuable during design, PRD scoping, or AI-assisted/"vibe coded"
 implementation where no security requirement was stated up front (see
 `security-architect:prd-security-injection` for injecting requirements into the
-PRD/prompt itself). See `reference.md` for the per-language tables.
+PRD/prompt itself). See `reference.md` for the per-language tables. For Python/
+React specifically, `secure-coding:safe-function-lint` turns a subset of this
+guidance into an enforced, hook-blocked check rather than a reference lookup —
+point the user there once they want prevention, not just guidance.

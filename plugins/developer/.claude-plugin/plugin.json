@@ -2,9 +2,9 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "developer",
   "description": "Developer role bundle: secure-by-default coding companion for engineers (including AI-assisted/agentic coding workflows) — secure coding patterns, PRD/prompt security requirements, and a pre-commit security gate. Auto-installs the core secure-dev stack.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": { "name": "Jassics", "email": "jassics@gmail.com" },
   "license": "GPL-3.0",
   "keywords": ["developer", "secure-coding", "secure-by-design", "role", "bundle", "pre-commit", "vibe-coding"],
-  "dependencies": ["security-knowledge", "sast-sca", "security-architect", "infrastructure-security"]
+  "dependencies": ["security-knowledge", "sast-sca", "security-architect", "infrastructure-security", "secure-coding"]
 }

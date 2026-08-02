@@ -26,6 +26,7 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `k8s-security` | ✅ |
 | `infrastructure-security` | ✅ |
 | `sast-sca` | ✅ |
+| `secure-coding` (Python/React enforcement — outdated-function detection, secret blocking, gitignore hygiene, git-hook install) | ✅ |
 | `osint` | ✅ |
 | `dfir` | ✅ |
 | `detection-engineering` | ✅ |
@@ -94,7 +95,7 @@ for each bundle's intended members.
 | `grc` | role | ✅ (deps: reporting, diagramming) |
 | `ciso-toolkit` | executive | ✅ (deps: reporting, diagramming, threat-modeling) |
 | `cto-security` | executive | ✅ (deps: threat-modeling, diagramming, reporting) |
-| `developer` | role | ✅ (deps: security-knowledge, sast-sca, security-architect, infrastructure-security) |
+| `developer` | role | ✅ (deps: security-knowledge, sast-sca, security-architect, infrastructure-security, secure-coding) |
 
 ## Cross-cutting workstreams
 

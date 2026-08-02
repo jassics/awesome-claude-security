@@ -25,7 +25,10 @@ reimplementing them.
    `terraform.tfstate*` actually excluded, and not already tracked via
    `git ls-files`).
 3. **SAST** — run `sast-sca:sast-review` on changed code files for unsafe
-   methods/APIs, with the safe-pattern fix.
+   methods/APIs, with the safe-pattern fix. For Python/React specifically, also
+   note whether `secure-coding:safe-function-lint`'s curated rule pack (and its
+   installed git hooks) already cover this changeset — if `secure-coding` isn't
+   installed/enforced in this repo, flag that as a gap alongside the findings.
 4. **SCA** — if a dependency manifest changed (`package.json`, `requirements.txt`,
    `go.mod`, `pom.xml`, lockfiles, etc.), run `sast-sca:sca-review` for
    outdated/vulnerable libraries and the safe version to move to.
@@ -47,7 +50,11 @@ immediately.
 # Notes
 
 This is deliberately a thin orchestrator over `sast-sca`, `infrastructure-security`,
-and `claude-config-security` — it owns no scanning logic of its own. Staying
+and `claude-config-security` — it owns no scanning logic of its own. It's also
+the diff-scoped, multi-language, Claude-session-only counterpart to
+`secure-coding`'s narrower but *enforced* Python/React git hooks — install both;
+this gate catches what the hooks don't cover (other languages, SCA, IaC), and
+the hooks catch commits made outside a Claude Code session. Staying
 scoped to the diff is the point: a gate that takes minutes gets skipped; a gate
 that takes seconds gets run. For anything the diff-scoped pass can't catch
 (architecture-level issues, cross-file trust boundaries), that's what a full

@@ -37,4 +37,8 @@ severity · remediation. Confirmed issues → `security-reporting:finding`.
 
 SAST is high-recall, low-precision — the value you add is triage. Always trace
 source→sink before accepting a finding, and flag what needs dynamic confirmation
-rather than over-claiming. Tune rules to cut recurring false positives.
+rather than over-claiming. Tune rules to cut recurring false positives. For
+Python or React/JS specifically, `secure-coding:safe-function-lint` covers a
+smaller, curated banned-function rule pack (CWE/ASVS-cited) *and* can enforce it
+via installed git hooks — this skill stays the broader, multi-language, scan-any-
+codebase pass; the two aren't mutually exclusive.
