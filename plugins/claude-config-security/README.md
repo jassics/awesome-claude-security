@@ -27,6 +27,7 @@ uvx agentscanner --help    # or: pipx install agentscanner / pip install agentsc
 | Skill | When it fires |
 | --- | --- |
 | `/claude-config-security:config-security-scan` | Audit a `.claude/` setup, `settings.json`, `.mcp.json`, a plugin/marketplace, or `CLAUDE.md` for misconfigurations — risky hooks, over-broad permissions, untrusted/cleartext MCP, secrets, endpoint redirection, over-privileged agents/skills, prompt-injection in steering files — then triage, remediate, and harden. |
+| `/claude-config-security:agent-safety-lint` | Narrow, fast check for agents/hooks with no runaway-risk bound — a missing or invalid `maxTurns`, or a hook with no `timeout` — before shipping a subagent or plugin. Requires `agentscanner>=0.3.0`. |
 
 ## What it catches
 
