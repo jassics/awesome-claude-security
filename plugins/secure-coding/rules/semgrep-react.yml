@@ -1,0 +1,80 @@
+rules:
+  - id: js-dangerously-set-inner-html
+    languages: [js, ts]
+    severity: ERROR
+    message: >
+      dangerouslySetInnerHTML with unsanitized data is stored/reflected XSS (CWE-79).
+      Sanitize with DOMPurify.sanitize() before assigning, or avoid raw HTML entirely.
+    metadata: { cwe: CWE-79, asvs: "ASVS 5.2.3" }
+    pattern: "<$EL dangerouslySetInnerHTML={{__html: $VAR}} />"
+
+  - id: js-innerhtml-assignment
+    languages: [js, ts]
+    severity: ERROR
+    message: "Direct innerHTML/outerHTML assignment with dynamic data is DOM-based XSS (CWE-79). Use textContent, or sanitize with DOMPurify first."
+    metadata: { cwe: CWE-79 }
+    patterns:
+      - pattern-either:
+          - pattern: $EL.innerHTML = $VAR
+          - pattern: $EL.outerHTML = $VAR
+
+  - id: js-eval-newfunction
+    languages: [js, ts]
+    severity: ERROR
+    message: "eval()/new Function() on dynamic strings allows arbitrary JS execution (CWE-95)."
+    metadata: { cwe: CWE-95 }
+    patterns:
+      - pattern-either:
+          - pattern: eval(...)
+          - pattern: new Function(...)
+
+  - id: js-postmessage-wildcard-origin
+    languages: [js, ts]
+    severity: WARNING
+    message: "postMessage with '*' target origin can leak data cross-origin (CWE-346). Use an explicit target origin."
+    metadata: { cwe: CWE-346 }
+    pattern: $WIN.postMessage($DATA, "*")
+
+  - id: js-token-in-local-storage
+    languages: [js, ts]
+    severity: WARNING
+    message: >
+      Storing tokens/JWTs in localStorage/sessionStorage is readable by any XSS
+      (CWE-522). Prefer HttpOnly, Secure, SameSite cookies for session tokens.
+    metadata: { cwe: CWE-522, asvs: "ASVS 3.2" }
+    patterns:
+      - pattern-either:
+          - pattern: localStorage.setItem($KEY, $TOKEN)
+          - pattern: sessionStorage.setItem($KEY, $TOKEN)
+      - metavariable-regex:
+          metavariable: $KEY
+          regex: (?i).*(token|jwt|session|auth).*
+
+  - id: js-tls-reject-unauthorized-false
+    languages: [js, ts]
+    severity: ERROR
+    message: "rejectUnauthorized: false disables TLS certificate validation (CWE-295) — MITM risk."
+    metadata: { cwe: CWE-295 }
+    pattern: "rejectUnauthorized: false"
+
+  - id: js-math-random-for-secrets
+    languages: [js, ts]
+    severity: WARNING
+    message: "Math.random() is not cryptographically secure (CWE-330). Use crypto.getRandomValues()/crypto.randomBytes() for tokens."
+    metadata: { cwe: CWE-330 }
+    pattern: Math.random()
+
+  - id: js-child-process-exec-string
+    languages: [js, ts]
+    severity: ERROR
+    message: "child_process.exec with a string-interpolated command allows command injection (CWE-78). Use execFile(bin, argsArray)."
+    metadata: { cwe: CWE-78 }
+    pattern: child_process.exec($CMD)
+
+  - id: js-hardcoded-secret-assignment
+    languages: [js, ts]
+    severity: ERROR
+    message: "Hardcoded API key/secret in frontend source ships to every client and can't be revoked post-release (CWE-798). Proxy the call through a backend that holds the secret."
+    metadata: { cwe: CWE-798 }
+    patterns:
+      - pattern-regex: '(?i)(api_key|apikey|secret|token|password)\s*[:=]\s*["\''][^"\'']{12,}["\'']'

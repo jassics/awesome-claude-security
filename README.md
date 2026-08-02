@@ -76,6 +76,7 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 14. [`vulnerability-management`](plugins/vulnerability-management/) (triage, CVSS/EPSS/KEV prioritization, remediation SLAs)
 15. [`supply-chain-security`](plugins/supply-chain-security/) (dependency trust, SLSA/Sigstore provenance, CI/CD integrity)
 16. [`claude-config-security`](plugins/claude-config-security/) (audit the Claude Code config itself — hooks/MCP/permissions/skills — via the [`agentscanner`](https://pypi.org/project/agentscanner/) CLI).
+17. [`secure-coding`](plugins/secure-coding/) (Python/React outdated-function + secret/credential enforcement, git-hook blocking)
 
 **GenAI security**
 1. [`llm-security`](plugins/llm-security/) (OWASP LLM Top 10, prompt injection)

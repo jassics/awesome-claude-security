@@ -1,0 +1,113 @@
+rules:
+  - id: py-eval-exec
+    languages: [python]
+    severity: ERROR
+    message: >
+      eval()/exec() on non-literal input allows arbitrary code execution (CWE-95).
+      Remove it; for parsing literals use ast.literal_eval, for dispatch use an
+      explicit mapping instead of dynamic code.
+    metadata: { cwe: CWE-95, asvs: "ASVS 5.2" }
+    patterns:
+      - pattern-either:
+          - pattern: eval(...)
+          - pattern: exec(...)
+
+  - id: py-pickle-load
+    languages: [python]
+    severity: ERROR
+    message: >
+      pickle.load(s) on untrusted data enables arbitrary object construction / RCE
+      (CWE-502). Use json for data interchange; if pickle is required, HMAC-sign
+      and verify before unpickling.
+    metadata: { cwe: CWE-502, asvs: "ASVS 1.5.2" }
+    patterns:
+      - pattern-either:
+          - pattern: pickle.load(...)
+          - pattern: pickle.loads(...)
+
+  - id: py-yaml-unsafe-load
+    languages: [python]
+    severity: ERROR
+    message: "yaml.load without SafeLoader allows arbitrary object construction (CWE-502). Use yaml.safe_load()."
+    metadata: { cwe: CWE-502 }
+    patterns:
+      - pattern: yaml.load($STREAM)
+      - pattern-not: yaml.load($STREAM, Loader=yaml.SafeLoader)
+
+  - id: py-subprocess-shell-true
+    languages: [python]
+    severity: ERROR
+    message: >
+      subprocess with shell=True + interpolated input allows shell/command injection
+      (CWE-78). Use shell=False with an argument list.
+    metadata: { cwe: CWE-78 }
+    patterns:
+      - pattern-either:
+          - pattern: subprocess.run(..., shell=True, ...)
+          - pattern: subprocess.call(..., shell=True, ...)
+          - pattern: subprocess.Popen(..., shell=True, ...)
+
+  - id: py-os-system
+    languages: [python]
+    severity: ERROR
+    message: "os.system/os.popen with interpolated input allows command injection (CWE-78). Use subprocess.run([...], shell=False)."
+    metadata: { cwe: CWE-78 }
+    patterns:
+      - pattern-either:
+          - pattern: os.system(...)
+          - pattern: os.popen(...)
+
+  - id: py-weak-hash-for-secrets
+    languages: [python]
+    severity: WARNING
+    message: >
+      md5/sha1 are fast hashes, unsuitable for passwords/tokens (CWE-916). Use
+      argon2-cffi (Argon2id) or bcrypt for password hashing.
+    metadata: { cwe: CWE-916, asvs: "ASVS 6.2.1" }
+    patterns:
+      - pattern-either:
+          - pattern: hashlib.md5(...)
+          - pattern: hashlib.sha1(...)
+
+  - id: py-insecure-random-for-secrets
+    languages: [python]
+    severity: WARNING
+    message: "random module is not cryptographically secure (CWE-330). Use the secrets module for tokens/session IDs."
+    metadata: { cwe: CWE-330, asvs: "ASVS 6.3.1" }
+    patterns:
+      - pattern-either:
+          - pattern: random.random()
+          - pattern: random.randint(...)
+          - pattern: random.choice(...)
+
+  - id: py-requests-verify-false
+    languages: [python]
+    severity: ERROR
+    message: "TLS certificate validation disabled (CWE-295) — MITM risk. Remove verify=False; pin a CA bundle if needed."
+    metadata: { cwe: CWE-295 }
+    pattern-either:
+      - pattern: requests.get(..., verify=False, ...)
+      - pattern: requests.post(..., verify=False, ...)
+      - pattern: requests.request(..., verify=False, ...)
+
+  - id: py-flask-debug-true
+    languages: [python]
+    severity: WARNING
+    message: "Flask debug=True exposes the Werkzeug debugger (RCE via console) if reachable outside local dev (CWE-489)."
+    metadata: { cwe: CWE-489 }
+    pattern: $APP.run(..., debug=True, ...)
+
+  - id: py-tempfile-mktemp
+    languages: [python]
+    severity: WARNING
+    message: "tempfile.mktemp() has a TOCTOU race (CWE-377). Use tempfile.mkstemp() or NamedTemporaryFile()."
+    metadata: { cwe: CWE-377 }
+    pattern: tempfile.mktemp(...)
+
+  - id: py-hardcoded-secret-assignment
+    languages: [python]
+    severity: ERROR
+    message: "Hardcoded credential/secret literal in source (CWE-798). Load from env or a secret manager, and rotate if already committed."
+    metadata: { cwe: CWE-798, asvs: "ASVS 6.4.1" }
+    patterns:
+      - pattern-regex: '(?i)(api_key|secret|token|password|passwd)\s*=\s*["\''][^"\'']{8,}["\'']'
