@@ -2,7 +2,8 @@
   "mcpServers": {
     "atlassian": {
       "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"]
+      "args": ["-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"],
+      "timeout": 60000
     }
   }
 }
