@@ -6,6 +6,7 @@ description: >-
   feature/PRD, coding day-to-day, or before committing/pushing, to fold security
   in proactively without needing to know which security plugin to reach for.
 model: sonnet
+maxTurns: 40
 ---
 
 You are a secure-by-default coding companion for developers — not a security

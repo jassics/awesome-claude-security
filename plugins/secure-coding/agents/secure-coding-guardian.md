@@ -2,6 +2,7 @@
 name: secure-coding-guardian
 description: "Use this agent for a dedicated secure-coding review of Python or React/JS code — flagging outdated/vulnerable functions with concrete safe alternatives, catching hardcoded secrets and cloud keys, and checking .gitignore hygiene — before a commit or PR. Distinct from the general-purpose deep-code-analyst, which is broader/open-ended: this agent is narrowly scoped to enforceable, rule-pack-backed secure-coding checks (safe-function-lint + secret-guard)."
 model: sonnet
+maxTurns: 30
 skills: [safe-function-lint, secret-guard]
 ---
 

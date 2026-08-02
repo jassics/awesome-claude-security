@@ -9,8 +9,9 @@ broken, make `/plugin install` fail for users:
   3. name == directory == catalog entry (kebab-case), per CLAUDE.md conventions.
   4. Every `dependencies` entry resolves to a plugin that exists in this repo.
   5. Every SKILL.md has non-empty `name`/`description`, and skill dir == skill name.
-  6. Every agent .md has non-empty `name`/`description` and declares none of the
-     forbidden keys (hooks / mcpServers / permissionMode).
+  6. Every agent .md has non-empty `name`/`description`, declares none of the
+     forbidden keys (hooks / mcpServers / permissionMode), and sets a `maxTurns`
+     integer within [10, 60] to bound runaway cost/loops/CI runtime.
 
 Exit code 0 = clean, 1 = one or more violations (printed).
 """
@@ -28,6 +29,7 @@ MARKETPLACE = ROOT / ".claude-plugin" / "marketplace.json"
 
 KEBAB = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 FORBIDDEN_AGENT_KEYS = ("hooks", "mcpServers", "permissionMode")
+MAX_TURNS_MIN, MAX_TURNS_MAX = 10, 60
 
 errors: list[str] = []
 
@@ -91,6 +93,21 @@ def check_agent(agent_md: Path, plugin: str) -> None:
     for k in FORBIDDEN_AGENT_KEYS:
         if k in fm:
             err(f"{plugin}/agents/{agent_md.name}: declares forbidden key '{k}' (not allowed in plugin agents)")
+
+    raw = fm.get("maxTurns")
+    if raw is None:
+        err(f"{plugin}/agents/{agent_md.name}: missing `maxTurns` (required to bound cost/runtime/CI runs)")
+    else:
+        try:
+            turns = int(raw)
+        except ValueError:
+            err(f"{plugin}/agents/{agent_md.name}: `maxTurns` value '{raw}' is not an integer")
+        else:
+            if not (MAX_TURNS_MIN <= turns <= MAX_TURNS_MAX):
+                err(
+                    f"{plugin}/agents/{agent_md.name}: `maxTurns: {turns}` outside allowed range "
+                    f"[{MAX_TURNS_MIN}, {MAX_TURNS_MAX}]"
+                )
 
 
 def main() -> int:

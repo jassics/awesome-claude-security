@@ -71,12 +71,15 @@ Guidelines:
 
 Agents are personas Claude can delegate multi-step work to. Frontmatter supported by plugin agents: `name`, `description`, `model`, `effort`, `maxTurns`, `tools`, `disallowedTools`, `skills`, `memory`, `background`, `isolation`. (`hooks`, `mcpServers`, and `permissionMode` are not allowed in plugin agents.)
 
+`maxTurns` is **required** and must be an integer in `[10, 60]` — `scripts/validate-marketplace.py` enforces this. It bounds runaway token/cost spend, prevents a hung/looping agent, and keeps unattended CI/CD invocations from running indefinitely. Pick 30 for narrowly-scoped agents (single review type, few skills) and 40 for broad, high-`effort` coordinators that compose many plugins; don't go above 60 even for the broadest role agents.
+
 ```markdown
 ---
 name: llm-security-reviewer
 description: Reviews LLM/GenAI features for security weaknesses end-to-end. Use for a full assessment rather than a single check.
 model: sonnet
 effort: high
+maxTurns: 40
 ---
 
 You are a senior AI security reviewer. ...
