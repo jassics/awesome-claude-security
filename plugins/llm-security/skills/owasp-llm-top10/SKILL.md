@@ -38,3 +38,9 @@ Read `reference.md` for the authoritative category list, signs to look for, and
 mitigations. Keep testing authorized and within the app's intended scope. Excessive
 agency and improper output handling are the categories most often missed — give
 them explicit attention.
+
+The Top 10 increasingly folds in agentic risk (LLM06 Excessive Agency and
+related entries) as apps move from single-turn chat to tool-using agents. For
+MCP-specific and multi-tool agent trust-boundary review, see
+`agentic-ai-security:mcp-security-review`; for the full agent threat model see
+`agentic-ai-security:agent-security-review`.

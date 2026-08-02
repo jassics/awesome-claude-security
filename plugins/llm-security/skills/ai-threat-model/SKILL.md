@@ -54,3 +54,6 @@ plugins go deeper.
 This is a **security** threat model (attacker-driven). It does not cover **AI
 safety** — harm to users/society without an attacker (harmful content, bias,
 reliability, misuse). For that, run `ai-safety:harm-modeling` alongside this.
+
+For multi-agent/agentic systems, also consider `threat-modeling:maestro` (CSA's
+agent-native threat-modeling layers) alongside STRIDE.

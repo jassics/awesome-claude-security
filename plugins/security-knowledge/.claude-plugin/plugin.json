@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "security-knowledge",
-  "description": "Shared security reference packs for consistent mapping across plugins: MITRE ATT&CK tactics/techniques lookup, OWASP Top 10 families (Web/API/LLM/Mobile), and cross-framework control mapping (CWE, NIST CSF/800-53, CIS, ISO 27001).",
-  "version": "0.1.0",
+  "description": "Shared security reference packs for consistent mapping across plugins: MITRE ATT&CK/DEF3ND lookup, OWASP Top 10 families (Web/API/LLM/Mobile) and ASVS verification levels, cross-framework control mapping (CWE, NIST CSF/800-53, CIS, ISO 27001), and a per-language secure-coding quick reference.",
+  "version": "0.2.0",
   "author": { "name": "Jassics", "email": "jassics@gmail.com" },
   "license": "GPL-3.0",
-  "keywords": ["reference", "mitre-attack", "owasp", "cwe", "nist", "iso-27001", "cis", "mapping"]
+  "keywords": ["reference", "mitre-attack", "def3nd", "owasp", "asvs", "cwe", "nist", "iso-27001", "cis", "secure-coding", "mapping"]
 }

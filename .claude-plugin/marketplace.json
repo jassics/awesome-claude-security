@@ -277,6 +277,14 @@
       "license": "GPL-3.0"
     },
     {
+      "name": "developer",
+      "source": "./plugins/developer",
+      "description": "Developer role bundle: secure-by-default coding companion for engineers, including AI-assisted/agentic coding workflows — secure coding patterns, PRD/prompt security requirements, and a pre-commit security gate. Auto-installs the core secure-dev stack.",
+      "category": "role",
+      "keywords": ["developer", "secure-coding", "secure-by-design", "role", "bundle", "pre-commit", "vibe-coding"],
+      "license": "GPL-3.0"
+    },
+    {
       "name": "security-analyst",
       "source": "./plugins/security-analyst",
       "description": "Security analyst role bundle: investigation and analysis (T2/T3) \u2014 correlate telemetry, enrich with intel, reconstruct timelines, and reach evidence-backed verdicts. Auto-installs the defensive stack.",

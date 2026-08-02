@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "security-architect",
-  "description": "Security architect role bundle: secure-by-design architecture and design review, threat modeling, control selection, and trust-boundary analysis. Auto-installs its core stack.",
-  "version": "0.2.0",
+  "description": "Security architect role bundle: secure-by-design architecture and design review, threat modeling, control selection, trust-boundary analysis, ASVS/SAMM maturity assessment, and pre-code PRD security requirement injection. Auto-installs its core stack.",
+  "version": "0.3.0",
   "author": { "name": "Jassics", "email": "jassics@gmail.com" },
   "license": "GPL-3.0",
   "keywords": ["security-architect", "secure-by-design", "design-review", "role", "bundle", "threat-modeling"],

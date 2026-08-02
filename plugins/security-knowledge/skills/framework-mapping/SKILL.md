@@ -28,18 +28,24 @@ forcing bad mappings.
 3. **Map deliberately** — use authoritative crosswalks where they exist (e.g., 800-53
    ↔ CSF, CIS ↔ multiple). Note mapping confidence; flag "no clean equivalent" rather
    than inventing one.
-4. **Cite versions** — frameworks revise (CSF 1.1→2.0, ISO 27001:2013→2022); state the
+4. **For a *defensive control* citation** (not just a weakness/compliance mapping),
+   map to **MITRE DEF3ND** — cite the technique + the countermeasure it defends
+   against, cross-referencing `security-knowledge:attack-lookup` for the ATT&CK side.
+5. **Cite versions** — frameworks revise (CSF 1.1→2.0, ISO 27001:2013→2022); state the
    edition.
 
 # Output
 
 A mapping row per item: root cause · CWE · NIST CSF · 800-53 family/control · CIS
-Control · ISO 27001 Annex A · confidence. For gap assessments and registers route to
-`grc`; for exec framing to `ciso-toolkit`/`security-reporting`.
+Control · ISO 27001 Annex A · DEF3ND countermeasure (if a defensive control is being
+specified) · confidence. For gap assessments and registers route to `grc`; for exec
+framing to `ciso-toolkit`/`security-reporting`.
 
 # Notes
 
 Map root cause, not symptom — the CWE for "what's actually wrong" drives every other
 mapping. Crosswalks are approximate; over-precise control mappings mislead auditors.
-Always cite the framework edition. See `reference.md` for families and crosswalk
-pointers.
+Always cite the framework edition. DEF3ND complements ATT&CK: ATT&CK says what an
+attacker does, DEF3ND says what countermeasure defends against it — use both when a
+detection/response control needs justifying. See `reference.md` for families and
+crosswalk pointers.

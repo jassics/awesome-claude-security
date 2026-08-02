@@ -63,6 +63,7 @@ Each bundle lists its **intended** members. Only the ✅ members are wired today
 | `security-engineer` ✅ | `sast-sca` ✅, `cloud-suite` ✅ (→ cloud-security, k8s-security, infrastructure-security), `security-reporting` ✅ |
 | `ciso-toolkit` ✅ *(executive)* | `security-reporting` ✅, `security-diagramming` ✅, `threat-modeling` ✅ |
 | `cto-security` ✅ *(executive)* | `threat-modeling` ✅, `security-diagramming` ✅, `security-reporting` ✅ |
+| `developer` ✅ | `security-knowledge` ✅, `sast-sca` ✅, `security-architect` ✅, `infrastructure-security` ✅ |
 
 ### Domain suites (domain plugins only)
 

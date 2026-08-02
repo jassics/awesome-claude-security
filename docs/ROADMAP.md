@@ -67,6 +67,7 @@ The catalog in `.claude-plugin/marketplace.json` only lists plugins that actuall
 | `soc-siem` | ✅ |
 | `ciso-toolkit` (executive — board decks, strategy, risk narratives) | ✅ |
 | `cto-security` (executive — tech strategy, secure-by-design) | ✅ |
+| `developer` (secure-by-default coding companion, pre-commit gate) | ✅ |
 
 ## Bundles (roles + domain suites)
 
@@ -93,6 +94,7 @@ for each bundle's intended members.
 | `grc` | role | ✅ (deps: reporting, diagramming) |
 | `ciso-toolkit` | executive | ✅ (deps: reporting, diagramming, threat-modeling) |
 | `cto-security` | executive | ✅ (deps: threat-modeling, diagramming, reporting) |
+| `developer` | role | ✅ (deps: security-knowledge, sast-sca, security-architect, infrastructure-security) |
 
 ## Cross-cutting workstreams
 

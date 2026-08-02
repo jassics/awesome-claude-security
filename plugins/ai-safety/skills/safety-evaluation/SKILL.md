@@ -41,9 +41,12 @@ decision and tracks regression over time.
 # Output
 
 A safety eval report: per-category pass rate vs threshold, notable failures
-(redacted), over- vs under-refusal balance, and prioritized fixes. Offer to wire it
-into CI via `ai-safety-engineer`. Use `security-diagramming:infographic` for a
-scorecard and `security-reporting` for the writeup.
+(redacted), over- vs under-refusal balance, and prioritized fixes. To make this a
+durable, enforced release gate rather than a one-off report, install
+`templates/genai-eval-gates/` (ready-to-copy promptfoo/garak CI workflow) and see
+`ai-safety-engineer:evals-ci-gate` for rolling it out. Use
+`security-diagramming:infographic` for a scorecard and `security-reporting` for
+the writeup.
 
 # Notes
 

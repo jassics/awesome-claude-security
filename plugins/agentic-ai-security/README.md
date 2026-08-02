@@ -23,6 +23,9 @@ where `llm-security` (LLM06 Excessive Agency) leaves off and goes deep on action
 | `/agentic-ai-security:agent-security-review` | Assess an agent's security end-to-end (tools, autonomy, memory, multi-agent trust). |
 | `/agentic-ai-security:tool-permission-audit` | Inventory the agent's tools and their privileges; find least-privilege gaps. |
 | `/agentic-ai-security:autonomy-boundary-test` | Test what the agent will do without human confirmation, incl. injected-goal scenarios. |
+| `/agentic-ai-security:mcp-security-review` | Review MCP server trust, tool/result poisoning, confused-deputy risk, and consent/scope UX. |
+| `/agentic-ai-security:agent-harness-review` | Test the agent execution harness/runtime (LangChain/AutoGen/CrewAI, custom loops, computer-use) for intermediate-state poisoning and unscoped action space. |
+| `/agentic-ai-security:a2a-security-review` | Review agent-to-agent trust: peer identity, message integrity, capability-negotiation trust, delegation-chain privilege narrowing. |
 
 ## Security vs. safety
 

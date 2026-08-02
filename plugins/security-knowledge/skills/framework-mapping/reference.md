@@ -50,6 +50,30 @@ Provider Management · 16 Application Software Security · 17 Incident Response 
 93 controls in 4 themes: **A.5 Organizational** · **A.6 People** · **A.7 Physical** ·
 **A.8 Technological**. ISMS/certification framing.
 
+## MITRE DEF3ND — defensive countermeasures
+
+DEF3ND is MITRE's countermeasure framework, technique-mapped to **ATT&CK** (see
+`attack-lookup`) — it answers "what defensive control stops/detects this attacker
+technique," complementing ATT&CK's "what does the attacker do."
+
+Five top-level tactics: **Harden** (reduce attack surface) · **Detect** (identify
+adversary activity) · **Isolate** (restrict lateral movement/access) · **Deceive**
+(mislead the adversary) · **Evict** (remove adversary presence).
+
+Example technique ↔ countermeasure pairs:
+
+- ATT&CK **T1055** Process Injection ↔ DEF3ND **D3-PSA** (Process Spawn Analysis) /
+  **D3-PMAD** (Process Memory Anomaly Detection) — Detect.
+- ATT&CK **T1078** Valid Accounts ↔ DEF3ND **D3-UBA** (User Behavior Analysis) /
+  **D3-MFA** (Multi-factor Authentication) — Detect / Harden.
+- ATT&CK **T1021** Remote Services (lateral movement) ↔ DEF3ND **D3-NI**
+  (Network Isolation) / **D3-ANCI** (Authentication Cache Invalidation) — Isolate.
+
+Cite the DEF3ND technique ID alongside the ATT&CK ID it defends against; treat exact
+D3FEND IDs as approximate if you're not certain — confirm against the current
+d3fend.mitre.org taxonomy for precision-critical work (e.g. detection engineering
+rule justification, control-gap audits).
+
 ## Crosswalk pointers
 
 - **800-53 ↔ CSF**: NIST provides subcategory-to-control mappings (and OLIR catalog).

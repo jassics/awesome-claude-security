@@ -20,15 +20,26 @@ a path to centralized, least-privilege, rotated secrets.
    variables, error messages, or client-side code; secrets in plaintext at rest.
 3. **Storage** — is a secrets manager/vault used (HashiCorp Vault, cloud secret
    managers, k8s external secrets)? Or are secrets scattered ("sprawl")?
-4. **Access & scope** — who/what can read each secret; least privilege; per-service
+4. **Gitignore hygiene** — confirm sensitive paths are actually excluded, not just
+   assumed: `.env`/`.env.*`, `*.pem`/`*.key`/`*.p12`/`*.pfx`, `id_rsa*`,
+   `credentials.json`, `*kubeconfig*`, `terraform.tfstate*`/`.terraform/`, vendored
+   cloud-CLI creds (`.aws/credentials`, `.azure/`, `.gcloud/`), and tool local-state
+   dirs that can carry secrets/session data (`.claude/`, `.vscode/` settings with
+   tokens, `.idea/`). Check both directions: pattern present in `.gitignore` **and**
+   the inverse via `git ls-files` — a file already tracked stays tracked even after
+   it's added to `.gitignore`, so gitignoring it later doesn't remove it from
+   history. Flag high-severity any sensitive path that's untracked-but-not-ignored
+   (next `git add .`/`-A` will commit it) or tracked-and-should-be-untracked.
+5. **Access & scope** — who/what can read each secret; least privilege; per-service
    scoping vs. shared god-secrets.
-5. **Rotation & lifecycle** — rotation policy, expiry, revocation on compromise,
+6. **Rotation & lifecycle** — rotation policy, expiry, revocation on compromise,
    detection of leaked secrets.
 
 # Steps
 
 1. Scope the surfaces (repos, IaC, CI/CD, registries, runtime config). Run secret
    scanners where possible (gitleaks, trufflehog, detect-secrets) and review results.
+   Check `.gitignore` coverage and `git ls-files` for sensitive paths as above.
 2. For each finding: classify (hardcoded / exposed / unrotated / over-scoped),
    confirm it's a real secret, and assess blast radius.
 3. Treat any live, committed secret as an incident: flag for **rotation/revocation**,
@@ -39,8 +50,8 @@ a path to centralized, least-privilege, rotated secrets.
 # Output
 
 A findings table: location · secret type · issue · severity · action (rotate/
-revoke/vault/scope). Confirmed live secrets → `security-reporting:finding` (rate
-high+; recommend rotation, not just deletion).
+revoke/vault/scope/gitignore). Confirmed live secrets → `security-reporting:finding`
+(rate high+; recommend rotation, not just deletion).
 
 # Notes
 

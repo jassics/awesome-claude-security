@@ -25,6 +25,9 @@ reviews and reports across web, API, LLM, and mobile work line up.
 3. **Hand off to the deep skill** — the family plugins own the actual testing
    methodology (`web-app-security`, `api-security`, `llm-security`, `mobile-security`);
    this skill is the consistent *reference/tagging* layer.
+4. **For control-level verification depth** (not just a Top-10 category tag), see
+   `asvs-reference` — OWASP ASVS gives the requirement + level (L1/L2/L3) a finding
+   should be checked against.
 
 # Output
 

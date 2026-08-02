@@ -1,0 +1,105 @@
+# GenAI eval gate — copy to <your-repo>/.github/workflows/genai-eval-gate.yml
+#
+# Runs on every PR (and optionally nightly): a promptfoo eval-suite pass and a
+# garak adversarial-probe pass against your model/endpoint. The gate job fails
+# the run only on a REGRESSION vs. the committed baseline — not on every
+# non-zero finding — to avoid the noise-driven-bypass failure mode (see
+# EVAL-GATE-NOTES.md). Pin every action to a specific release tag before relying
+# on this as a blocking check — the `@<PIN_ME>` placeholders are deliberate.
+#
+# Verify promptfoo/garak CLI flags against their current docs — both tools
+# evolve; treat the invocations below as a starting skeleton.
+
+name: genai-eval-gate
+
+on:
+  pull_request:
+  schedule:
+    - cron: "0 3 * * *"  # optional nightly run against the live endpoint
+
+permissions:
+  contents: read
+
+jobs:
+  promptfoo-eval:
+    name: Safety/regression eval (promptfoo)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install promptfoo
+        run: npm install -g promptfoo@<PIN_ME>
+      - name: Run eval suite
+        env:
+          # Wire in whatever credentials your provider needs, e.g.:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          promptfoo eval --config promptfoo.config.yaml \
+            --output eval-results.json
+      - name: Compare against baseline
+        run: |
+          # Committed baseline this run is compared to — see EVAL-GATE-NOTES.md
+          # for how/when to update it. A missing baseline on first run is fine
+          # (treat as report-only until one exists).
+          if [ -f eval-baseline.json ]; then
+            # compare_eval_baseline.py: fails (exit 1) only on a real pass-rate
+            # regression beyond a small tolerance vs. the committed baseline —
+            # tune the tolerance in that script, not the finding count.
+            python3 .github/scripts/compare_eval_baseline.py eval-baseline.json eval-results.json
+          else
+            echo "No eval-baseline.json committed yet — running report-only. See EVAL-GATE-NOTES.md."
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: promptfoo-eval-results
+          path: eval-results.json
+
+  garak-probe:
+    name: Adversarial probe (garak)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install garak
+        run: pip install garak==<PIN_ME>
+      - name: Run probe pass
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          # Point --model_type/--model_name at your actual provider/model.
+          # This is a quick automated probe pass, not a substitute for
+          # ai-safety:safety-red-team's deeper manual adversarial work.
+          garak --model_type replace-with-your-provider \
+                --model_name replace-with-your-model \
+                --report_prefix garak-report \
+                || echo "garak reported findings — see uploaded report, not auto-failing this job."
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: garak-report
+          path: garak-report*
+
+  gate:
+    name: Enforce gate
+    needs: [promptfoo-eval, garak-probe]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check eval regression result
+        run: |
+          # garak-probe is intentionally advisory (upload + review, not auto-fail)
+          # until you've burned in a baseline for it too — see EVAL-GATE-NOTES.md.
+          if [ "${{ needs.promptfoo-eval.result }}" = "failure" ]; then
+            echo "Eval regression gate failed — see promptfoo-eval job logs/artifact."
+            exit 1
+          fi
+          echo "No eval regression detected (or running report-only pending a baseline)."
+
+# Rollout note: keep this whole workflow non-required in branch protection
+# until eval-baseline.json exists and has burned in for a couple of weeks —
+# see EVAL-GATE-NOTES.md.

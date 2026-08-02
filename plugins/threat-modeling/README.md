@@ -1,8 +1,9 @@
 # threat-modeling
 
-Threat modeling in depth. Walk a system through **STRIDE** or **PASTA**, build the
-**data flow diagram**, enumerate threats per element and trust boundary, rank them
-by risk, and produce concrete, prioritized mitigations.
+Threat modeling in depth. Walk a system through **STRIDE** or **PASTA**, or a
+multi-agent/agentic AI system through **MAESTRO**, build the **data flow
+diagram**, enumerate threats per element/layer and trust boundary, rank them by
+risk, and produce concrete, prioritized mitigations.
 
 A **domain** plugin. It composes `security-diagramming` for DFDs/attack trees and
 `security-reporting` for the writeup.
@@ -19,6 +20,7 @@ A **domain** plugin. It composes `security-diagramming` for DFDs/attack trees an
 | --- | --- |
 | `/threat-modeling:stride` | Run a STRIDE threat model over a system/DFD. |
 | `/threat-modeling:pasta` | Run the risk-centric 7-stage PASTA process. |
+| `/threat-modeling:maestro` | Run CSA's MAESTRO layered threat model for multi-agent/agentic AI systems. |
 | `/threat-modeling:risk-rank` | Rank enumerated threats and map them to mitigations. |
 
 ## The safety sibling

@@ -39,7 +39,13 @@ build/deploy path.
 2. Assess against the four areas above; for each gap note severity and the fix.
 3. Recommend the gate set + policy, supply-chain controls, and hardening changes;
    prefer failing closed on high-severity, reachable findings.
-4. Provide concrete config (pipeline steps / policy) where helpful.
+4. Provide concrete config (pipeline steps / policy) where helpful. When the gates
+   need to be **implemented**, not just designed, start from
+   `templates/security-gates/` in this repo (a working `.pre-commit-config.yaml` +
+   GitHub Actions workflow already wired to gitleaks/semgrep/bandit/checkov/
+   OSV-Scanner) rather than writing gate config from scratch — copy it in, pin
+   every hook/action to a real release tag, then tune severity thresholds and
+   file globs to the target repo.
 
 # Output
 
@@ -51,4 +57,6 @@ target pipeline design (gates + supply-chain + hardening). Use `security-reporti
 A pipeline is itself a high-value target — an attacker who owns CI owns prod. Pin
 third-party actions and scope runner credentials tightly. Make gates **actionable**:
 gates that fire constant false positives get bypassed, which is worse than no gate.
-Track exceptions with owners and expiry.
+Track exceptions with owners and expiry. See `templates/security-gates/
+SECURITY-GATE-NOTES.md` for a concrete burn-in rollout (report-only → tuned →
+blocking) so a new gate doesn't get bypassed on day one.

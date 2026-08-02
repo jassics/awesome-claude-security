@@ -29,6 +29,7 @@ Auto-installs its dependencies: `ai-safety`, `security-reporting`,
 | Skill | When it fires |
 | --- | --- |
 | `/ai-safety-engineer:safety-case` | Assemble a structured assurance/safety case (claims → arguments → evidence) for deploying an AI system. |
+| `/ai-safety-engineer:evals-ci-gate` | Turn a safety-eval suite into an enforced CI gate (promptfoo/garak template, regression baseline, burn-in rollout). |
 
 ## Agents
 

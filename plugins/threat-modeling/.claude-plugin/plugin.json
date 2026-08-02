@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "threat-modeling",
-  "description": "STRIDE / PASTA threat modeling, data flow diagrams, attack trees, and risk-ranked mitigations.",
-  "version": "0.1.0",
+  "description": "STRIDE / PASTA / MAESTRO threat modeling, data flow diagrams, attack trees, and risk-ranked mitigations.",
+  "version": "0.2.0",
   "author": { "name": "Jassics", "email": "jassics@gmail.com" },
   "license": "GPL-3.0",
-  "keywords": ["threat-modeling", "stride", "pasta", "dfd", "risk", "secure-design"]
+  "keywords": ["threat-modeling", "stride", "pasta", "maestro", "agentic-ai", "dfd", "risk", "secure-design"]
 }

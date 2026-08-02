@@ -1,0 +1,119 @@
+# CI security gates — copy to <your-repo>/.github/workflows/security-gates.yml
+#
+# Runs on every PR and on push to main: secret scan, SAST, SCA/dependency scan,
+# and IaC scan (only when IaC files changed). A final gate job fails the run if
+# any scanner reported HIGH/CRITICAL. Pin every action to a specific release tag
+# (@vX.Y.Z or a commit SHA) before relying on this as a blocking check — the
+# `@<PIN_ME>` placeholders below are deliberate, not an oversight.
+
+name: security-gates
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  security-events: write  # required for SARIF upload to code scanning
+
+jobs:
+  secrets:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # gitleaks needs full history to scan commits, not just the tree
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@<PIN_ME>
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  sast:
+    name: SAST (semgrep)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run semgrep
+        uses: semgrep/semgrep-action@<PIN_ME>
+        with:
+          config: auto
+          generateSarif: "1"
+      - name: Upload SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: semgrep.sarif
+
+  sca:
+    name: SCA / dependency scan (OSV-Scanner)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run OSV-Scanner
+        uses: google/osv-scanner-action/osv-scanner-action@<PIN_ME>
+        with:
+          scan-args: |-
+            --output=results.sarif
+            --format=sarif
+            --recursive
+            ./
+      - name: Upload SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: results.sarif
+
+  iac:
+    name: IaC scan (checkov)
+    runs-on: ubuntu-latest
+    # Only run when infra/IaC paths changed — adjust globs to your repo layout.
+    if: |
+      contains(github.event.head_commit.message, '[iac]') ||
+      github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Detect IaC changes
+        id: iac-changed
+        run: |
+          if git diff --name-only "origin/${{ github.base_ref || 'main' }}"...HEAD \
+             | grep -Eq '\.(tf|yaml|yml|json)$|^(infra|terraform|k8s)/'; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Run checkov
+        if: steps.iac-changed.outputs.changed == 'true'
+        uses: bridgecrewio/checkov-action@<PIN_ME>
+        with:
+          output_format: sarif
+          output_file_path: checkov.sarif
+      - name: Upload SARIF
+        if: steps.iac-changed.outputs.changed == 'true'
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: checkov.sarif
+
+  gate:
+    name: Enforce gate (fail on HIGH/CRITICAL)
+    needs: [secrets, sast, sca, iac]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check upstream job results
+        run: |
+          # `needs.*.result` is one of success/failure/cancelled/skipped.
+          # `iac` legitimately skips when no IaC changed — that's not a failure.
+          if [ "${{ needs.secrets.result }}" = "failure" ] || \
+             [ "${{ needs.sast.result }}" = "failure" ] || \
+             [ "${{ needs.sca.result }}" = "failure" ] || \
+             [ "${{ needs.iac.result }}" = "failure" ]; then
+            echo "One or more security gates failed — see the job logs/SARIF above."
+            exit 1
+          fi
+          echo "All security gates passed (or were not applicable)."
+
+# Rollout note: start each scanner job with `continue-on-error: true` and watch
+# the SARIF/code-scanning results for a burn-in period before removing it and
+# making the gate job truly blocking — see SECURITY-GATE-NOTES.md.

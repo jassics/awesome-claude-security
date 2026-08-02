@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "security-engineer",
   "description": "Security engineer role bundle: build and harden — DevSecOps, secure CI/CD pipelines, control implementation, and remediation across code, cloud, and infrastructure. Auto-installs its stack.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": { "name": "Jassics", "email": "jassics@gmail.com" },
   "license": "GPL-3.0",
   "keywords": ["security-engineer", "devsecops", "hardening", "ci-cd", "role", "bundle", "remediation"],

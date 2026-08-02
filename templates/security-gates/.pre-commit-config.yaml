@@ -1,0 +1,56 @@
+# Pre-commit security gates — copy to <your-repo>/.pre-commit-config.yaml
+#
+# IMPORTANT: every `rev:` below is a placeholder. Check each project's releases
+# page and pin to the current stable tag before enabling this as a blocking
+# gate — do not commit an unpinned or guessed version.
+#
+# Install: pip install pre-commit && pre-commit install
+# Baseline an existing repo before enforcing: pre-commit run --all-files
+
+repos:
+  # --- Secret scanning -------------------------------------------------------
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v<PIN_ME>  # pin to latest tag, e.g. v8.x.y
+    hooks:
+      - id: gitleaks
+
+  # --- SAST (all languages) ---------------------------------------------------
+  - repo: https://github.com/semgrep/semgrep
+    rev: v<PIN_ME>  # pin to latest tag
+    hooks:
+      - id: semgrep
+        args: ["--config", "auto", "--error"]
+
+  # --- SAST (Python-specific) --------------------------------------------------
+  - repo: https://github.com/PyCQA/bandit
+    rev: <PIN_ME>  # pin to latest tag
+    hooks:
+      - id: bandit
+        args: ["-ll"]
+        files: \.py$
+
+  # --- Shell ------------------------------------------------------------------
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v<PIN_ME>  # pin to latest tag
+    hooks:
+      - id: shellcheck
+        files: \.(sh|bash)$
+
+  # --- Dockerfile ---------------------------------------------------------------
+  - repo: https://github.com/hadolint/hadolint
+    rev: v<PIN_ME>  # pin to latest tag
+    hooks:
+      - id: hadolint-docker
+        files: Dockerfile.*
+
+  # --- IaC (Terraform / CloudFormation / K8s manifests) ------------------------
+  - repo: https://github.com/bridgecrewio/checkov
+    rev: <PIN_ME>  # pin to latest tag
+    hooks:
+      - id: checkov
+        files: \.(tf|yaml|yml|json)$
+        # Narrow further to your actual IaC paths, e.g.:
+        # files: ^(infra|terraform|k8s)/.*\.(tf|yaml|yml)$
+
+# Drop any hook whose language/framework doesn't apply to this repo — a hook
+# that never fires isn't a gate, it's noise in CI logs.
