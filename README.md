@@ -98,7 +98,7 @@ Plugins are grouped into four buckets (see the full [taxonomy](docs/TAXONOMY.md)
 7. [`security-engineer`](plugins/security-engineer/) (DevSecOps, harden, secure pipelines)
 8. [`ai-safety-engineer`](plugins/ai-safety-engineer/)
 9. [`responsible-ai-officer`](plugins/responsible-ai-officer/) (AI governance, EU AI Act risk-tiering).
-10. [`grc`][plugins/grc]
+10. [`grc`](plugins/grc/) (governance, risk & compliance — framework gap assessments, control mapping)
 11. [`developer`](plugins/developer/) (secure-by-default coding companion, PRD/prompt security injection, pre-commit gate).
 
 **Executive** *(strategic tier)*
