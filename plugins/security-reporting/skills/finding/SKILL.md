@@ -25,7 +25,9 @@ One or two sentences: what the issue is and why it matters.
 
 ### Evidence
 Request/response, code excerpt, screenshot ref, log line, or command output.
-Redact secrets. Make it reproducible.
+Redact secrets. Make it reproducible. For code-backed findings, show the
+vulnerable snippet here (`file:line` + fenced code) and put the corrected
+version under Remediation as a matching fenced snippet — a before/after pair.
 
 ### Impact
 What an attacker achieves; tie to confidentiality/integrity/availability and to
@@ -35,8 +37,9 @@ business consequence.
 Numbered, minimal steps to observe the issue.
 
 ### Remediation
-Specific, testable fix(es). Prefer the durable root-cause fix; note interim
-mitigations. Link references (OWASP/CWE/vendor docs).
+Specific, testable fix(es) — for code issues, a fixed code snippet matching
+the vulnerable one in Evidence. Prefer the durable root-cause fix; note
+interim mitigations. Link references (OWASP/CWE/vendor docs).
 
 ### References
 CWE-XXX, OWASP item, advisories.
