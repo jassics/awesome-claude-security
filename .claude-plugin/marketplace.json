@@ -8,7 +8,7 @@
   },
   "metadata": {
     "description": "Claude Code skills, agents, and tooling for cybersecurity and GenAI security work.",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "pluginRoot": "./plugins"
   },
   "plugins": [
