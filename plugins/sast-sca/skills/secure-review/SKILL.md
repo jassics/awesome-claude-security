@@ -85,8 +85,21 @@ scope here — hand off to `infrastructure-security:iac-security-review` /
 
 # Output
 
-- Findings ordered by severity (Critical/High/Medium/Low), each with `file:line`,
-  the vulnerable snippet, the exploit/abuse scenario, and a concrete fix.
+- Findings ordered by severity (Critical/High/Medium/Low), each with `file:line`
+  and the exploit/abuse scenario, formatted as a before/after code pair:
+
+  ```
+  **Vulnerable** (`file:line`):
+  ```<lang>
+  <exact vulnerable snippet from the diff/file>
+  ```
+  **Fixed:**
+  ```<lang>
+  <minimal corrected snippet — same shape, only the fix changed>
+  ```
+  ```
+  Keep both snippets minimal (just the vulnerable statement + immediate
+  context, not the whole function) so the diff is obvious at a glance.
 - For business-logic findings, use the abuse-scenario format in `reference.md`
   (actor, goal, steps, business impact).
 - Score meaningful findings with CVSS via `security-reporting:cvss` rather than a guessed label.
