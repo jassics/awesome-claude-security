@@ -29,8 +29,22 @@ findings (or "not applicable / mitigated") and prioritized mitigations.
 # Output
 
 A per-category table (category · applicable? · finding · severity · mitigation)
-plus a ranked top-risks list. Route findings through `security-reporting:finding`
-for formal writeups.
+plus a ranked top-risks list. For any finding backed by actual code (prompt
+construction, output handling, tool-call authorization, etc.), include a
+before/after snippet pair rather than just describing the fix:
+
+```
+**Vulnerable** (`file:line`):
+```<lang>
+<exact vulnerable snippet>
+```
+**Fixed:**
+```<lang>
+<minimal corrected snippet — same shape, only the fix changed>
+```
+```
+Keep both snippets minimal (just the vulnerable statement + immediate context).
+Route findings through `security-reporting:finding` for formal writeups.
 
 # Notes
 
