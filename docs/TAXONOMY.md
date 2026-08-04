@@ -43,7 +43,7 @@ Reused by every role and domain. Keep these self-contained and dependency-light.
 | `cloud-security` | AWS/Azure/GCP posture, IAM, CSPM, misconfig review. |
 | `k8s-security` | Kubernetes/CNCF, pod security, RBAC, supply chain. |
 | `infrastructure-security` | IaC review, hardening, CIS benchmarks, secrets. |
-| `sast-sca` | Static analysis + dependency/SCA scanning, SBOM, triage. |
+| `sast-sca` | Static analysis + dependency/SCA scanning, SBOM, triage, plus manual adversarial code review (business-logic abuse, auth/injection). |
 | `secure-coding` | Python/React secure-coding enforcement: outdated/vulnerable function detection with safe alternatives, secret/credential blocking on commit+push (Claude Code hook + real git hooks), `.gitignore` hygiene. |
 | `osint` | Footprinting, recon, exposure discovery, attribution. |
 | `dfir` | Incident response, forensics, timeline, triage. |
