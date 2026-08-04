@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "sast-sca",
   "description": "Static analysis (SAST) and software composition analysis (SCA): run/triage code scans, dependency/SBOM analysis, and prioritize findings.",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": { "name": "Jassics", "email": "jassics@gmail.com" },
   "license": "GPL-3.0",
   "keywords": ["sast", "sca", "appsec", "sbom", "dependencies", "code-scanning", "triage"]

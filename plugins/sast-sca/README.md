@@ -19,6 +19,7 @@ authorized to analyze.
 | --- | --- |
 | `/sast-sca:sast-review` | Run/triage static analysis on a codebase and confirm real issues. |
 | `/sast-sca:sca-review` | Analyze dependencies/SBOM for known-vulnerable and risky components. |
+| `/sast-sca:secure-review` | Manual, adversarial review of a diff/path/PR — injection, authn/authz, business-logic abuse, crypto, headers, PII — with phase commands and PoC output. |
 
 ## Pairs well with
 
