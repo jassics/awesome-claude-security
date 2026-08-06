@@ -18,8 +18,9 @@ on their own.
 ```
 
 This **auto-installs** its full stack: `security-knowledge`, `sast-sca`,
-`security-architect`, `infrastructure-security`, and `secure-coding`. (`claude
-plugin prune` cleans them up later if you remove this bundle.)
+`security-architect`, `infrastructure-security`, `secure-coding`, and
+`threat-modeling`. (`claude plugin prune` cleans them up later if you remove
+this bundle.)
 
 `secure-coding` is the one dependency that's *enforced*, not just advisory — it
 installs a Claude Code hook plus real git hooks that block a commit/push
