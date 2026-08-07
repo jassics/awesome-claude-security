@@ -48,6 +48,15 @@ languages).
 | --- | --- |
 | `developer` | Coordinate security across a feature's lifecycle — PRD/prompt requirements, secure-coding guidance while writing code, and the pre-commit gate before shipping. |
 
+## Shift-down coverage
+
+![developer bundle shift-down diagram](../../docs/developer-bundle-shift-down.png)
+
+Green = what this bundle covers today (PRD → threat modeling → architecture
+review → secure coding → enforced pre-commit gate). Red dashed = gaps still
+needing a server-side CI gate, DAST/runtime protection, pentest cadence, and
+GRC/secrets-rotation tooling. Full write-up: [`docs/developer-bundle-shift-down.md`](../../docs/developer-bundle-shift-down.md).
+
 ## Scope
 
 This bundle is aimed at **developers and engineers**, not security specialists —
